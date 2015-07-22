@@ -1,3 +1,3 @@
-module.exports = {
-    no_tmpl_loop: require('./rules/no_tmpl_loop')
-};
+module.exports = [
+    require('./rules/no_tmpl_loop')
+];

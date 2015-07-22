@@ -10,10 +10,9 @@ function run(ast, rules, callback) {
     }
 
     walker(ast, undefined, function(node) {
-        // @FIXME: should rules be an array instead?
-        for (rule in rules) {
+        for (var i = 0, len = rules.length; i < len; i += 1) {
             // @FIXME: do we really need promises here?
-            rules[rule].run(node, log);
+            rules[i].run(node, log);
         }
     });
 
