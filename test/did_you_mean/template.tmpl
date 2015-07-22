@@ -1,0 +1,19 @@
+<TMPL_IF b_experiment_hash_exp_name></TMPL_IF>
+<TMPL_IF b_exeriment_hash_exp_name></TMPL_IF>
+<TMPL_IF b_experiment_has_exp_name></TMPL_IF>
+<TMPL_IF [% $b_condition && $b_exeriment_hash_exp_name %]></TMPL_IF>
+<TMPL_INLINE template.inc
+    b_hash=b_experiment_has_exp_name>
+
+<TMPL_VAR b_track_experiment_exp_name>
+<TMPL_VAR b_the_expeliarmus>
+
+<TMPL_IF b_tack_experiment_exp_name>
+    <TMPL_VAR b_text>
+</TMPL_IF>
+<TMPL_IF b_track_exeriment_exp_name>
+    <TMPL_VAR b_text>
+</TMPL_IF>
+<TMPL_IF [% $b_condition && $b_track_exeriment_exp_name %]>
+    <TMPL_VAR b_text>
+</TMPL_IF>

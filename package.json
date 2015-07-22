@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "htmltemplate-parser": "0.0.4",
+    "htmltemplate-parser": "0.0.5",
     "multiline": "^1.0.2"
   }
 }
