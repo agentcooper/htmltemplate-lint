@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+var program = require('commander');
+
+var linter = require('..');
+
+program
+    .version(require('../package.json').version)
+    .usage('<file ...>')
+    .parse(process.argv);
+
+linter(program.args[0]);

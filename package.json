@@ -2,6 +2,7 @@
   "name": "htmltemplate-lint",
   "version": "0.0.1",
   "description": "Booking.com HTMLTemplate linter",
+  "bin": "bin/lint",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/test.js"
@@ -9,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "2.8.1",
     "htmltemplate-parser": "0.0.6",
     "multiline": "^1.0.2"
   }
