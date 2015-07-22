@@ -1,0 +1,47 @@
+[
+    {
+        "type": "warning",
+        "name": "no_empty_condition",
+        "message": "Leaving empty condition blocks is discouraged.",
+        "position": {
+            "line": 9,
+            "column": 1
+        }
+    },
+    {
+        "type": "warning",
+        "name": "no_empty_condition",
+        "message": "Leaving empty condition blocks is discouraged.",
+        "position": {
+            "line": 14,
+            "column": 1
+        }
+    },
+    {
+        "type": "warning",
+        "name": "no_empty_condition",
+        "message": "Leaving empty condition blocks is discouraged.",
+        "position": {
+            "line": 19,
+            "column": 1
+        }
+    },
+    {
+        "type": "warning",
+        "name": "no_empty_condition",
+        "message": "Leaving empty condition blocks is discouraged.",
+        "position": {
+            "line": 24,
+            "column": 1
+        }
+    },
+    {
+        "type": "warning",
+        "name": "no_empty_condition",
+        "message": "Leaving empty condition blocks is discouraged.",
+        "position": {
+            "line": 29,
+            "column": 1
+        }
+    }
+]
