@@ -1,0 +1,14 @@
+<TMPL_INLINE template.inc>
+
+<TMPL_ILINE template.inc>
+</TMPL_ID>
+
+<TMPL_CSRF_TOKEN>
+<TMPL_CSRF_FORM method="POST">
+
+<TMPL_CASE b_type>
+    <TMPL_WHEN [% 1 %]>
+        <TMPL_ASSIGN b_variable [% 'value' %]>
+    <TMPL_OTHERWISE>
+        <TMPL_ASSIGN b_variable [% 'value2' %]>
+</TMPL_CASE>

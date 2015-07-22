@@ -1,0 +1,20 @@
+[
+    {
+        "type": "error",
+        "name": "no_invalid_tags",
+        "message": "Invalid tag TMPL_ILINE.",
+        "position": {
+            "line": 3,
+            "column": 1
+        }
+    },
+    {
+        "type": "error",
+        "name": "no_invalid_tags",
+        "message": "Invalid tag TMPL_ID.",
+        "position": {
+            "line": 4,
+            "column": 1
+        }
+    }
+]
