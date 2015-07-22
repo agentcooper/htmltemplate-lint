@@ -1,0 +1,20 @@
+[
+    {
+        "type": "warning",
+        "name": "no_complex_unless",
+        "message": "Use of expressions in TMPL_UNLESS is discouraged.",
+        "position": {
+            "line": 5,
+            "column": 1
+        }
+    },
+    {
+        "type": "warning",
+        "name": "no_complex_unless",
+        "message": "Use of TMPL_ELSE with TMPL_UNLESS is discouraged.",
+        "position": {
+            "line": 9,
+            "column": 1
+        }
+    }
+]
