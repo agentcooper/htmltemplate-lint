@@ -9,4 +9,12 @@ program
     .usage('<file ...>')
     .parse(process.argv);
 
-linter(program.args[0]);
+var filepath = program.args[0];
+
+if (typeof filepath === 'string') {
+    linter(filepath);
+} else {
+    console.log('');
+    console.log('  error: no file to lint');
+    console.log('');
+}
