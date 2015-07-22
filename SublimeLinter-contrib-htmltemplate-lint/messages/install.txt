@@ -1,0 +1,10 @@
+SublimeLinter-contrib-htmltemplate-lint
+-------------------------------
+This linter plugin for SublimeLinter provides an interface to htmltemplate-lint.
+
+** IMPORTANT! **
+
+Before this plugin will activate, you *must*
+follow the installation instructions here:
+
+https://github.com/Artem Tyurin/SublimeLinter-contrib-htmltemplate-lint
