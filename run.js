@@ -1,10 +1,11 @@
+var C = require('./lib/constants');
 var walker = require('./walker');
 
 function run(ast, rules, callback) {
     var _log = [];
 
     function log(err) {
-        if (err) {
+        if (err.type !== C.RESULT_TYPES.NO_PROBLEMS) {
             _log.push(err);
         }
     }
