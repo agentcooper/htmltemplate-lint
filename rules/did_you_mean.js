@@ -76,13 +76,13 @@ module.exports = {
 function isMistypedBExperimentHash(string) {
     return (
         string.match(B_EXPERIMENT_HASH_REGEX) &&
-        string.indexOf(B_EXPERIMENT_HASH_STRING) !== 0
+        string.indexOf(B_EXPERIMENT_HASH_STRING) === -1
     );
 }
 
 function isMistypedBTrackExperiment(string) {
     return (
         string.match(B_TRACK_EXPERIMENT_REGEX) &&
-        string.indexOf(B_TRACK_EXPERIMENT_STRING) !== 0
+        string.indexOf(B_TRACK_EXPERIMENT_STRING) === -1
     );
 }
