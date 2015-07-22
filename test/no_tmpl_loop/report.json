@@ -1,0 +1,11 @@
+[
+    {
+        "type": "warning",
+        "name": "no_tmpl_loop",
+        "message": "It is better to use TMPL_FOR instead",
+        "position": {
+            "line": 1,
+            "column": 1
+        }
+    }
+]

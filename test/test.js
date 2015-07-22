@@ -1,27 +1,41 @@
+var fs = require('fs');
+var path = require('path');
 var assert = require('assert');
 
 var parser = require('htmltemplate-parser');
 
 var run = require('../run');
+var rules = require('../rules');
 
-var multiline = require('multiline');
+describe('rules', function() {
 
-describe('no_tmpl_loop', function() {
-    it('should warn about TMPL_LOOP usage', function(done) {
-        var tmpl = multiline(function(){/*
-        <TMPL_LOOP><TMPL_VAR name></TMPL_LOOP>
-        */});
+    fs.readdirSync(__dirname)
+        .filter(function(name) {
+            return name.indexOf('.js') === -1;
+        })
+        .forEach(function(name) {
+            it(name, function(done) {
 
-        var ast = parser.parse(tmpl);
+                var tmpl = fs.readFileSync(
+                    path.join(__dirname, name, 'template.tmpl'),
+                    'utf8'
+                );
 
-        run(ast, {
-            // @FIXME: or should we run all rules at the same time?
-            no_tmpl_loop: require('../rules/no_tmpl_loop')
-        }, function(log) {
-            assert.equal(log[0].name, 'no_tmpl_loop');
-            assert.deepEqual(log[0].position, { line: 1, column: 9 });
+                var expected = JSON.parse(
+                    fs.readFileSync(
+                        path.join(__dirname, name, 'report.json'),
+                        'utf8'
+                    )
+                );
 
-            done();
+                var ast = parser.parse(tmpl);
+
+                run(ast, rules, function(actual) {
+                    assert.deepEqual(expected, actual);
+                    done();
+                });
+
+            });
         });
-    });
+
 });
