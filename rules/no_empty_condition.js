@@ -6,8 +6,8 @@ var WARNING_MESSAGE = 'Leaving empty condition blocks is discouraged.';
 
 module.exports = {
     run: function(node, done) {
-        if (node.type === 'Condition' && (Array.isArray(node.otherwise) || node.conditions.length > 1)) {
-            if (Array.isArray(node.otherwise) && hasEmptyContent(node.otherwise)) {
+        if (node.type === 'Condition' && (node.otherwise || node.conditions.length > 1)) {
+            if (node.otherwise && hasEmptyContent(node.otherwise.content)) {
                 return done(
                     problem(
                         RULE_NAME,

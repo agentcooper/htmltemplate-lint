@@ -1,0 +1,38 @@
+[
+    {
+        "type": "error",
+        "name": "no_html_commented_tags",
+        "message": "Do not wrap template tags in HTML comments.",
+        "position": {
+            "line": 3,
+            "column": 6
+        }
+    },
+    {
+        "type": "error",
+        "name": "no_html_commented_tags",
+        "message": "Do not wrap template tags in HTML comments.",
+        "position": {
+            "line": 6,
+            "column": 1
+        }
+    },
+    {
+        "type": "error",
+        "name": "no_html_commented_tags",
+        "message": "Do not wrap template tags in HTML comments.",
+        "position": {
+            "line": 20,
+            "column": 10
+        }
+    },
+    {
+        "type": "error",
+        "name": "no_html_commented_tags",
+        "message": "Do not wrap template tags in HTML comments.",
+        "position": {
+            "line": 22,
+            "column": 10
+        }
+    }
+]

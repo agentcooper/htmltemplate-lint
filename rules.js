@@ -3,6 +3,7 @@ module.exports = [
     require('./rules/no_complex_unless'),
     require('./rules/no_empty_condition'),
     require('./rules/no_generate_variant'),
+    require('./rules/no_html_commented_tags'),
     require('./rules/no_invalid_tags'),
     require('./rules/no_tmpl_loop')
 ];
