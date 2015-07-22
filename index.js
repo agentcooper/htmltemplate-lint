@@ -1,21 +1,30 @@
-var fs = require('fs');
-var inspect = require('util').inspect;
-
 var parser = require('htmltemplate-parser');
+
+var C = require('./lib/constants');
 
 var run = require('./run');
 var rules = require('./rules');
+var problem = require('./lib/problem');
 
-module.exports = function(filename) {
-    var tmpl = fs.readFileSync(filename, 'utf8');
-
+module.exports = function(tmpl, callback) {
     try {
-        var ast = parser.parse(tmpl);
+        run(
+            parser.parse(tmpl),
+            rules,
+            callback
+        );
     } catch(e) {
-        console.error(e);
+        // Returning array for consistency with rules runner.
+        callback([
+            problem(
+                'parse_error',
+                C.RESULT_TYPES.ERROR,
+                e.message,
+                {
+                    line: e.line,
+                    column: e.column
+                }
+            )
+        ]);
     }
-
-    run(ast, rules, function(log) {
-        console.log(inspect(log, { colors: true, depth: Infinity }));
-    });
 };

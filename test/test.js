@@ -2,10 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var assert = require('assert');
 
-var parser = require('htmltemplate-parser');
-
-var run = require('../run');
-var rules = require('../rules');
+var linter = require('..');
 
 describe('rules', function() {
 
@@ -28,9 +25,7 @@ describe('rules', function() {
                     )
                 );
 
-                var ast = parser.parse(tmpl);
-
-                run(ast, rules, function(actual) {
+                linter(tmpl, function(actual) {
                     assert.deepEqual(expected, actual);
                     done();
                 });

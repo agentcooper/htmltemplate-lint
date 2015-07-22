@@ -1,0 +1,11 @@
+[
+    {
+        "type": "error",
+        "name": "parse_error",
+        "message": "Expected \"#\", \"##\", \"<\", \"</\", any character or end of line but end of input found.",
+        "position": {
+            "line": 3,
+            "column": 1
+        }
+    }
+]

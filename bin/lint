@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+var fs = require('fs');
+var inspect = require('util').inspect;
 var program = require('commander');
 
 var linter = require('..');
@@ -12,9 +14,30 @@ program
 var filepath = program.args[0];
 
 if (typeof filepath === 'string') {
-    linter(filepath);
+    try {
+        linter(
+            fs.readFileSync(filepath, 'utf8'),
+            function(report) {
+                console.log(
+                    inspect(report, { colors: true, depth: Infinity })
+                );
+            }
+        );
+    } catch(e) {
+        printError('problem reading ' + filepath, e);
+    }
 } else {
+    printError('no file to lint');
+}
+
+function printError(message, error) {
     console.log('');
-    console.log('  error: no file to lint');
+    console.log('  error: ' + message);
+
+    if (error) {
+        console.log('');
+        console.log('  ' + error.toString());
+    }
+
     console.log('');
 }
