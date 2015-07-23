@@ -6,7 +6,7 @@ var inspect = util.inspect;
 var program = require('commander');
 
 var linter = require('..');
-var linterReport = require('../lib/linterReport');
+var linterReport = require('../lib/linter_report');
 
 program
     .version(require('../package.json').version)
