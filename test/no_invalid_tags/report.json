@@ -4,7 +4,7 @@
         "name": "no_invalid_tags",
         "message": "Invalid tag TMPL_ILINE.",
         "position": {
-            "line": 3,
+            "line": 4,
             "column": 1
         }
     },
@@ -13,7 +13,7 @@
         "name": "no_invalid_tags",
         "message": "Invalid tag TMPL_ID.",
         "position": {
-            "line": 4,
+            "line": 5,
             "column": 1
         }
     },
@@ -22,7 +22,7 @@
         "name": "no_invalid_tags",
         "message": "Invalid tag TMPL_VR.",
         "position": {
-            "line": 5,
+            "line": 6,
             "column": 1
         }
     }

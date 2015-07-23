@@ -4,7 +4,7 @@
         "name": "no_html_commented_tags",
         "message": "Do not wrap template tags in HTML comments.",
         "position": {
-            "line": 3,
+            "line": 4,
             "column": 6
         }
     },
@@ -13,7 +13,7 @@
         "name": "no_html_commented_tags",
         "message": "Do not wrap template tags in HTML comments.",
         "position": {
-            "line": 6,
+            "line": 7,
             "column": 1
         }
     },
@@ -22,7 +22,7 @@
         "name": "no_html_commented_tags",
         "message": "Do not wrap template tags in HTML comments.",
         "position": {
-            "line": 20,
+            "line": 21,
             "column": 10
         }
     },
@@ -31,7 +31,7 @@
         "name": "no_html_commented_tags",
         "message": "Do not wrap template tags in HTML comments.",
         "position": {
-            "line": 22,
+            "line": 23,
             "column": 10
         }
     }

@@ -4,7 +4,7 @@
         "name": "no_tmpl_loop",
         "message": "It is better to use TMPL_FOR instead.",
         "position": {
-            "line": 1,
+            "line": 3,
             "column": 1
         }
     }

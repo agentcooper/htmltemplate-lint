@@ -4,7 +4,7 @@
         "name": "no_complex_unless",
         "message": "Use of expressions in TMPL_UNLESS is discouraged.",
         "position": {
-            "line": 5,
+            "line": 7,
             "column": 1
         }
     },
@@ -13,7 +13,7 @@
         "name": "no_complex_unless",
         "message": "Use of TMPL_ELSE with TMPL_UNLESS is discouraged.",
         "position": {
-            "line": 9,
+            "line": 11,
             "column": 1
         }
     }

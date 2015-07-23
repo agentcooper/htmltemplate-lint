@@ -1,5 +1,6 @@
 var C = require('../lib/constants');
 var problem = require('../lib/problem');
+var isWhiteSpaceOnlyNode = require('../lib/util').isWhiteSpaceOnlyNode;
 
 var RULE_NAME = 'no_empty_condition';
 var WARNING_MESSAGE = 'Leaving empty condition blocks is discouraged.';
@@ -41,10 +42,7 @@ module.exports = {
 function hasEmptyContent(content) {
     return content
         .filter(function(node) {
-            return !(
-                node.type === 'Text' &&
-                node.content.match(/^\s+$/g)
-            );
+            return !isWhiteSpaceOnlyNode(node);
         })
         .length === 0;
 }

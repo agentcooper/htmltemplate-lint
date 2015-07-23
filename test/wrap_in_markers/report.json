@@ -1,0 +1,11 @@
+[
+    {
+        "type": "Warning",
+        "name": "wrap_in_markers",
+        "message": "Begin template file with <TMPL_MARKER START>.",
+        "position": {
+            "line": 2,
+            "column": 1
+        }
+    }
+]

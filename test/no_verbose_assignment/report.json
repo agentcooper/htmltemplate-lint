@@ -4,7 +4,7 @@
         "name": "no_verbose_assignment",
         "message": "TMPL_SETVAR is too verbose for this case, use TMPL_ASSIGN.",
         "position": {
-            "line": 4,
+            "line": 6,
             "column": 1
         }
     }

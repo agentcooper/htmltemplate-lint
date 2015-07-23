@@ -4,7 +4,7 @@
         "name": "b_before_variable_name",
         "message": "Variables in templates should start with b_.",
         "position": {
-            "line": 2,
+            "line": 3,
             "column": 14
         }
     },
@@ -13,7 +13,7 @@
         "name": "b_before_variable_name",
         "message": "Variables in templates should start with b_.",
         "position": {
-            "line": 8,
+            "line": 9,
             "column": 14
         }
     }

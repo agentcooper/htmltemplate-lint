@@ -4,15 +4,6 @@
         "name": "did_you_mean",
         "message": "Did you mean b_experiment_hash?",
         "position": {
-            "line": 2,
-            "column": 10
-        }
-    },
-    {
-        "type": "Warning",
-        "name": "did_you_mean",
-        "message": "Did you mean b_experiment_hash?",
-        "position": {
             "line": 3,
             "column": 10
         }
@@ -31,7 +22,16 @@
         "name": "did_you_mean",
         "message": "Did you mean b_experiment_hash?",
         "position": {
-            "line": 6,
+            "line": 5,
+            "column": 10
+        }
+    },
+    {
+        "type": "Warning",
+        "name": "did_you_mean",
+        "message": "Did you mean b_experiment_hash?",
+        "position": {
+            "line": 7,
             "column": 5
         }
     },
@@ -40,7 +40,7 @@
         "name": "did_you_mean",
         "message": "Did you mean b_track_experiment?",
         "position": {
-            "line": 11,
+            "line": 12,
             "column": 10
         }
     },
@@ -49,7 +49,7 @@
         "name": "did_you_mean",
         "message": "Did you mean b_track_experiment?",
         "position": {
-            "line": 14,
+            "line": 15,
             "column": 10
         }
     },
@@ -58,7 +58,7 @@
         "name": "did_you_mean",
         "message": "Did you mean b_track_experiment?",
         "position": {
-            "line": 17,
+            "line": 18,
             "column": 10
         }
     }
