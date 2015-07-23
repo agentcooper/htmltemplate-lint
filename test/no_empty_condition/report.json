@@ -1,6 +1,6 @@
 [
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "no_empty_condition",
         "message": "Leaving empty condition blocks is discouraged.",
         "position": {
@@ -9,7 +9,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "no_empty_condition",
         "message": "Leaving empty condition blocks is discouraged.",
         "position": {
@@ -18,7 +18,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "no_empty_condition",
         "message": "Leaving empty condition blocks is discouraged.",
         "position": {
@@ -27,7 +27,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "no_empty_condition",
         "message": "Leaving empty condition blocks is discouraged.",
         "position": {
@@ -36,7 +36,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "no_empty_condition",
         "message": "Leaving empty condition blocks is discouraged.",
         "position": {

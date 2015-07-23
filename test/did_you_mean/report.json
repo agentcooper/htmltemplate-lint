@@ -1,6 +1,6 @@
 [
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "did_you_mean",
         "message": "Did you mean b_experiment_hash?",
         "position": {
@@ -9,7 +9,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "did_you_mean",
         "message": "Did you mean b_experiment_hash?",
         "position": {
@@ -18,7 +18,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "did_you_mean",
         "message": "Did you mean b_experiment_hash?",
         "position": {
@@ -27,7 +27,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "did_you_mean",
         "message": "Did you mean b_experiment_hash?",
         "position": {
@@ -36,7 +36,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "did_you_mean",
         "message": "Did you mean b_track_experiment?",
         "position": {
@@ -45,7 +45,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "did_you_mean",
         "message": "Did you mean b_track_experiment?",
         "position": {
@@ -54,7 +54,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "did_you_mean",
         "message": "Did you mean b_track_experiment?",
         "position": {

@@ -6,7 +6,6 @@ var inspect = util.inspect;
 var program = require('commander');
 
 var linter = require('..');
-
 var linterReport = require('../lib/linterReport');
 
 program
@@ -26,12 +25,11 @@ if (typeof filepath === 'string') {
                     console.log(
                         linterReport(report, filepath)
                     );
-                    return;
+                } else {
+                    console.log(
+                        inspect(report, { colors: true, depth: Infinity })
+                    );
                 }
-
-                console.log(
-                    inspect(report, { colors: true, depth: Infinity })
-                );
             }
         );
     } catch(e) {

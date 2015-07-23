@@ -1,6 +1,6 @@
 [
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_invalid_tags",
         "message": "Invalid tag TMPL_ILINE.",
         "position": {
@@ -9,7 +9,7 @@
         }
     },
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_invalid_tags",
         "message": "Invalid tag TMPL_ID.",
         "position": {
@@ -18,7 +18,7 @@
         }
     },
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_invalid_tags",
         "message": "Invalid tag TMPL_VR.",
         "position": {

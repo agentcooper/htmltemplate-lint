@@ -1,6 +1,6 @@
 [
     {
-        "type": "error",
+        "type": "Error",
         "name": "parse_error",
         "message": "Expected \"#\", \"##\", \"<\", \"</\", any character or end of line but end of input found.",
         "position": {

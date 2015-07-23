@@ -1,6 +1,6 @@
 [
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_generate_variant",
         "message": "b_generate_variant_for_js_tracking is deprecated.",
         "position": {
@@ -9,7 +9,7 @@
         }
     },
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_generate_variant",
         "message": "b_generate_variant_for_js_tracking is deprecated.",
         "position": {
@@ -18,7 +18,7 @@
         }
     },
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_generate_variant",
         "message": "b_generate_variant_for_js_tracking is deprecated.",
         "position": {

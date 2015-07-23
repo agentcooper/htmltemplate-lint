@@ -1,6 +1,6 @@
 [
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "no_complex_unless",
         "message": "Use of expressions in TMPL_UNLESS is discouraged.",
         "position": {
@@ -9,7 +9,7 @@
         }
     },
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "no_complex_unless",
         "message": "Use of TMPL_ELSE with TMPL_UNLESS is discouraged.",
         "position": {

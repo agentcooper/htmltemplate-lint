@@ -1,6 +1,6 @@
 [
     {
-        "type": "warning",
+        "type": "Warning",
         "name": "no_tmpl_loop",
         "message": "It is better to use TMPL_FOR instead.",
         "position": {

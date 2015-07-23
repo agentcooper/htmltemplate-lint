@@ -1,6 +1,6 @@
 [
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_html_commented_tags",
         "message": "Do not wrap template tags in HTML comments.",
         "position": {
@@ -9,7 +9,7 @@
         }
     },
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_html_commented_tags",
         "message": "Do not wrap template tags in HTML comments.",
         "position": {
@@ -18,7 +18,7 @@
         }
     },
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_html_commented_tags",
         "message": "Do not wrap template tags in HTML comments.",
         "position": {
@@ -27,7 +27,7 @@
         }
     },
     {
-        "type": "error",
+        "type": "Error",
         "name": "no_html_commented_tags",
         "message": "Do not wrap template tags in HTML comments.",
         "position": {
