@@ -13,7 +13,7 @@ module.exports = {
                         RULE_NAME,
                         C.RESULT_TYPES.WARNING,
                         WARNING_MESSAGE,
-                        node.position
+                        node
                     )
                 );
             }
@@ -25,7 +25,7 @@ module.exports = {
                             RULE_NAME,
                             C.RESULT_TYPES.WARNING,
                             WARNING_MESSAGE,
-                            node.position
+                            node
                         )
                     );
                 }

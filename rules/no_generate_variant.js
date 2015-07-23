@@ -26,7 +26,7 @@ module.exports = {
                     RULE_NAME,
                     C.RESULT_TYPES.ERROR,
                     'b_generate_variant_for_js_tracking is deprecated.',
-                    node.position
+                    node
                 )
             );
         }

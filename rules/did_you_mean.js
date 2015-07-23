@@ -19,7 +19,7 @@ module.exports = {
                         RULE_NAME,
                         C.RESULT_TYPES.WARNING,
                         DID_YOU_MEAN_EXPERIMENT_HASH,
-                        node.position
+                        node
                     )
                 );
             } else if (isMistypedBTrackExperiment(node.name)) {
@@ -28,7 +28,7 @@ module.exports = {
                         RULE_NAME,
                         C.RESULT_TYPES.WARNING,
                         DID_YOU_MEAN_TRACK_EXPERIMENT,
-                        node.position
+                        node
                     )
                 );
             }
@@ -40,7 +40,7 @@ module.exports = {
                     RULE_NAME,
                     C.RESULT_TYPES.WARNING,
                     DID_YOU_MEAN_EXPERIMENT_HASH,
-                    node.position
+                    node
                 )
             );
         }
@@ -52,7 +52,7 @@ module.exports = {
                         RULE_NAME,
                         C.RESULT_TYPES.WARNING,
                         DID_YOU_MEAN_EXPERIMENT_HASH,
-                        node.position
+                        node
                     )
                 );
             } else if (isMistypedBTrackExperiment(node.value)) {
@@ -61,7 +61,7 @@ module.exports = {
                         RULE_NAME,
                         C.RESULT_TYPES.WARNING,
                         DID_YOU_MEAN_TRACK_EXPERIMENT,
-                        node.position
+                        node
                     )
                 );
             }

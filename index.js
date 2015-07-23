@@ -6,10 +6,17 @@ var run = require('./run');
 var rules = require('./rules');
 var problem = require('./lib/problem');
 
+var BIG_FILE_THRESHOLD = 50 * 1024;
+
 module.exports = function(tmpl, callback) {
     try {
         run(
-            parser.parse(tmpl),
+            parser.parse(
+                tmpl,
+                {
+                    reducePositionLookups: tmpl.length > BIG_FILE_THRESHOLD
+                }
+            ),
             rules,
             callback
         );
@@ -21,8 +28,10 @@ module.exports = function(tmpl, callback) {
                 C.RESULT_TYPES.ERROR,
                 e.message,
                 {
-                    line: e.line,
-                    column: e.column
+                    position: {
+                        line: e.line,
+                        column: e.column
+                    }
                 }
             )
         ]);

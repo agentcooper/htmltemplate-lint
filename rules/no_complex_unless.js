@@ -12,7 +12,7 @@ module.exports = {
                         RULE_NAME,
                         C.RESULT_TYPES.WARNING,
                         'Use of TMPL_ELSE with TMPL_UNLESS is discouraged.',
-                        node.position
+                        node
                     )
                 );
             }
@@ -26,7 +26,7 @@ module.exports = {
                             RULE_NAME,
                             C.RESULT_TYPES.WARNING,
                             'Use of expressions in TMPL_UNLESS is discouraged.',
-                            node.position
+                            node
                         )
                     );
                 }

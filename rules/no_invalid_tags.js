@@ -21,7 +21,7 @@ module.exports = {
                     RULE_NAME,
                     C.RESULT_TYPES.ERROR,
                     'Invalid tag ' + node.name + '.',
-                    node.position
+                    node
                 )
             );
         }

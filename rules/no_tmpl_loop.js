@@ -11,7 +11,7 @@ module.exports = {
                     RULE_NAME,
                     C.RESULT_TYPES.WARNING,
                     'It is better to use TMPL_FOR instead.',
-                    node.position
+                    node
                 )
             );
         }

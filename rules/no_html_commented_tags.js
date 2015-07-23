@@ -30,7 +30,7 @@ module.exports = {
                             RULE_NAME,
                             C.RESULT_TYPES.ERROR,
                             'Do not wrap template tags in HTML comments.',
-                            nextNode.position
+                            nextNode
                         )
                     );
                 }
