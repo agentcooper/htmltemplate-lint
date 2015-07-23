@@ -10,7 +10,7 @@ var linterReport = require('../lib/linterReport');
 
 program
     .version(require('../package.json').version)
-    .option('--lint', 'Linter-compatible output')
+    .option('--oneline', 'SublimeLinter-compatible output')
     .usage('<file ...>')
     .parse(process.argv);
 
@@ -21,7 +21,7 @@ if (typeof filepath === 'string') {
         linter(
             fs.readFileSync(filepath, 'utf8'),
             function(report) {
-                if (program.lint) {
+                if (program.oneline) {
                     console.log(
                         linterReport(report, filepath)
                     );

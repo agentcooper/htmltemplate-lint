@@ -18,7 +18,7 @@ class HtmltemplateLint(NodeLinter):
     """Provides an interface to htmltemplate-lint."""
 
     syntax = 'html'
-    cmd = ('htmltemplate-lint', '--lint', '@')
+    cmd = ('htmltemplate-lint', '--oneline', '@')
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 1.0'
