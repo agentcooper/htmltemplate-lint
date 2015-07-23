@@ -8,7 +8,7 @@ module.exports = {
         if (node.name === 'TMPL_SETVAR' && node.content.length === 1) {
             var firstChild = node.content[0];
 
-            if (firstChild.name === 'TMPL_VAR' || firstChild.name === 'TMPL_V') {
+            if ((firstChild.name === 'TMPL_VAR' || firstChild.name === 'TMPL_V') && firstChild.attributes.length === 1) {
                 return done(
                     problem(
                         RULE_NAME,
