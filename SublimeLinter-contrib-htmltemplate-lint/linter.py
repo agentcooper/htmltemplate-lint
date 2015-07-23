@@ -32,7 +32,7 @@ class HtmltemplateLint(NodeLinter):
     tempfile_suffix = None
     error_stream = util.STREAM_BOTH
     selectors = {}
-    word_re = None
+    word_re = r'(\[%.*?%\]|[a-zA-Z0-9\-_<]+)'
     defaults = {}
     inline_settings = None
     inline_overrides = None
