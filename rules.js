@@ -6,6 +6,7 @@ module.exports = [
     require('./rules/no_generate_variant'),
     require('./rules/no_html_commented_tags'),
     require('./rules/no_invalid_tags'),
+    require('./rules/no_nested_setvar'),
     require('./rules/no_tmpl_loop'),
     require('./rules/no_verbose_assignment'),
     require('./rules/wrap_in_markers')

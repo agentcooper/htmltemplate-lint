@@ -1,0 +1,21 @@
+<TMPL_MARKER START>
+
+<TMPL_SETVAR b_value>2</TMPL_SETVAR>
+
+<TMPL_SETVAR b_value>
+    <TMPL_VAR b_value_old>
+    <TMPL_SETVAR b_l_value>
+        <TMPL_VAR b_value_old>2
+    </TMPL_SETVAR>
+    <TMPL_VAR b_l_value>
+</TMPL_SETVAR>
+
+<TMPL_SETVAR b_value>
+    <TMPL_VAR b_value_old>
+    <TMPL_IF b_condition>
+        <TMPL_SETVAR b_l_value>2</TMPL_SETVAR>
+    </TMPL_IF>
+    <TMPL_VAR b_l_value>
+</TMPL_SETVAR>
+
+<TMPL_MARKER END>

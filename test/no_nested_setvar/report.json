@@ -1,0 +1,20 @@
+[
+    {
+        "type": "Error",
+        "name": "no_nested_setvar",
+        "message": "Cannot nest TMPL_SETVAR statements.",
+        "position": {
+            "line": 7,
+            "column": 5
+        }
+    },
+    {
+        "type": "Error",
+        "name": "no_nested_setvar",
+        "message": "Cannot nest TMPL_SETVAR statements.",
+        "position": {
+            "line": 16,
+            "column": 9
+        }
+    }
+]
