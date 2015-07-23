@@ -1,0 +1,11 @@
+[
+    {
+        "type": "Warning",
+        "name": "no_verbose_assignment",
+        "message": "TMPL_SETVAR is too verbose for this case, use TMPL_ASSIGN.",
+        "position": {
+            "line": 4,
+            "column": 1
+        }
+    }
+]
