@@ -1,4 +1,5 @@
 module.exports = [
+    require('./rules/b_before_variable_name'),
     require('./rules/did_you_mean'),
     require('./rules/no_complex_unless'),
     require('./rules/no_empty_condition'),

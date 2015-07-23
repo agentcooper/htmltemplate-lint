@@ -1,0 +1,20 @@
+[
+    {
+        "type": "Warning",
+        "name": "b_before_variable_name",
+        "message": "Variables in templates should start with b_.",
+        "position": {
+            "line": 2,
+            "column": 14
+        }
+    },
+    {
+        "type": "Warning",
+        "name": "b_before_variable_name",
+        "message": "Variables in templates should start with b_.",
+        "position": {
+            "line": 4,
+            "column": 14
+        }
+    }
+]
