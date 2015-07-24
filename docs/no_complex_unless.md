@@ -1,10 +1,8 @@
-# Prevent complex TMPL_UNLESS statements (no_complex_unless)
+## Prevent complex TMPL_UNLESS statements (no_complex_unless)
 
 Warns when using complex `TMPL_UNLESS` statements, since they are usually harder
 to interpret for non-native English speakers. This rule will warn when using
 expressions or alternate condition branches with `TMPL_UNLESS`.
-
----------
 
 The following patterns are considered warnings:
 
