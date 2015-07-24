@@ -1,0 +1,47 @@
+[
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "TMPL_INLINE is missing required attribute.",
+        "position": {
+            "line": 4,
+            "column": 1
+        }
+    },
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "TMPL_BLOCK is missing required attribute.",
+        "position": {
+            "line": 10,
+            "column": 1
+        }
+    },
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "TMPL_INCLUDE is missing required attribute.",
+        "position": {
+            "line": 16,
+            "column": 1
+        }
+    },
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "TMPL_VAR is missing required attribute.",
+        "position": {
+            "line": 20,
+            "column": 1
+        }
+    },
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "TMPL_V is missing required attribute.",
+        "position": {
+            "line": 23,
+            "column": 1
+        }
+    }
+]

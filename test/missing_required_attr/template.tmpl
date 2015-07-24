@@ -1,0 +1,25 @@
+<TMPL_MARKER START>
+
+<TMPL_INLINE inc/template.inc>
+<TMPL_INLINE>
+
+<TMPL_BLOCK block_name>
+    <TMPL_VAR b_text>
+</TMPL_BLOCK>
+
+<TMPL_BLOCK>
+    <TMPL_VAR b_text>
+</TMPL_BLOCK>
+
+<TMPL_INCLUDE inc/template.inc>
+<TMPL_INCLUDE name="inc/template.inc">
+<TMPL_INCLUDE nome="inc/template.inc">
+
+<TMPL_VAR name="b_text">
+<TMPL_VAR [% $b_text %]>
+<TMPL_VAR>
+
+<TMPL_V name="b_text">
+<TMPL_V>
+
+<TMPL_MARKER END>
