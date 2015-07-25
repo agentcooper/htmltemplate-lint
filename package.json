@@ -5,7 +5,8 @@
   "bin": "bin/lint",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/test.js"
+    "test": "mocha test/test.js",
+    "generate-ancients": "node rules/no_ancient_experiments/generate.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "multiline": "^1.0.2"
   },
   "devDependencies": {
-    "mocha": "2.2.5"
+    "mocha": "2.2.5",
+    "read": "1.0.6",
+    "request": "2.60.0"
   }
 }

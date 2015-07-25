@@ -1,0 +1,14 @@
+<TMPL_MARKER START>
+
+<TMPL_IF b_track_experiment_new_experiment_name></TMPL_IF>
+<TMPL_IF b_track_experiment_test_only_old_experiment_name></TMPL_IF>
+<TMPL_VAR b_experiment_hash_test_only_old_experiment_name>
+<TMPL_IF b_generate_variant_for_js_tracking_test_only_old_experiment_name>
+  ## ...
+</TMPL_IF>
+
+<TMPL_IF [% $b_value eq 'ok' && $b_track_experiment_test_only_old_experiment_name %]>
+  ## ...
+</TMPL_IF>
+
+<TMPL_MARKER END>

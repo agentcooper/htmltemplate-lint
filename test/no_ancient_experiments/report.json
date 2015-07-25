@@ -1,0 +1,47 @@
+[
+    {
+        "type": "Warning",
+        "name": "no_ancient_experiments",
+        "message": "test_only_old_experiment_name is a very old stopped experiment.",
+        "position": {
+            "line": 4,
+            "column": 10
+        }
+    },
+    {
+        "type": "Warning",
+        "name": "no_ancient_experiments",
+        "message": "test_only_old_experiment_name is a very old stopped experiment.",
+        "position": {
+            "line": 5,
+            "column": 11
+        }
+    },
+    {
+        "type": "Warning",
+        "name": "no_ancient_experiments",
+        "message": "test_only_old_experiment_name is a very old stopped experiment.",
+        "position": {
+            "line": 6,
+            "column": 10
+        }
+    },
+    {
+        "type": "Error",
+        "name": "no_generate_variant",
+        "message": "b_generate_variant_for_js_tracking is deprecated.",
+        "position": {
+            "line": 6,
+            "column": 10
+        }
+    },
+    {
+        "type": "Warning",
+        "name": "no_ancient_experiments",
+        "message": "test_only_old_experiment_name is a very old stopped experiment.",
+        "position": {
+            "line": 10,
+            "column": 10
+        }
+    }
+]
