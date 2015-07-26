@@ -12,8 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "commander": "2.8.1",
-    "htmltemplate-parser": "0.0.9",
-    "multiline": "^1.0.2"
+    "htmltemplate-parser": "0.0.9"
   },
   "devDependencies": {
     "mocha": "2.2.5",
