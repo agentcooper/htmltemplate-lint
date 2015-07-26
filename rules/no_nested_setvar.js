@@ -1,6 +1,6 @@
 var C = require('../lib/constants');
 var problem = require('../lib/problem');
-var walker = require('../walker');
+var walker = require('../lib/walker');
 
 var RULE_NAME = 'no_nested_setvar';
 
