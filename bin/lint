@@ -2,8 +2,11 @@
 
 var fs = require('fs');
 var util = require('util');
+var path = require('path');
 var inspect = util.inspect;
 var program = require('commander');
+
+var walk = require('walk');
 
 var linter = require('..');
 var linterReport = require('../lib/linter_report');
@@ -16,28 +19,44 @@ program
 
 var filepath = program.args[0];
 
-if (typeof filepath === 'string') {
-    try {
-        linter(
-            fs.readFileSync(filepath, 'utf8'),
-            function(report) {
-                if (program.oneline) {
-                    console.log(
-                        linterReport(report, filepath)
-                    );
-                } else {
-                    console.log(
-                        inspect(report, { colors: true, depth: Infinity })
-                    );
-                }
-            }
+var extenstions = {
+    '.inc': 1,
+    '.tmpl': 1
+};
+
+function output(res, filepath) {
+    if (program.oneline) {
+        console.log(
+            linterReport(res, filepath)
         );
-    } catch(e) {
-        printError('problem reading ' + filepath, e);
+    } else {
+        console.log(
+            inspect(res, { colors: true, depth: Infinity })
+        );
     }
-} else {
-    printError('no file to lint');
 }
+
+var walker = walk.walk(filepath, { followLinks: false });
+
+walker
+.on('file', function(root, fileStats, next) {
+    var extenstion = path.extname(fileStats.name);
+
+    if (!extenstions[extenstion]) {
+        return next();
+    }
+
+    var fullPath = path.join(root, fileStats.name);
+
+    linter(fs.readFileSync(fullPath, 'utf8'), function(res) {
+        output(res, fullPath);
+        next();
+    });
+})
+.on('errors', function(root, nodeStatsArray, next) {
+    console.error(nodeStatsArray);
+    next();
+});
 
 function printError(message, error) {
     console.log('');

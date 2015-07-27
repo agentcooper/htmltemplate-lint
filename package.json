@@ -12,7 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "2.8.1"
+    "commander": "2.8.1",
+    "walk": "^2.3.9"
   },
   "devDependencies": {
     "mocha": "2.2.5",
