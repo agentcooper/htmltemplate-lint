@@ -11,8 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "commander": "2.8.1",
-    "htmltemplate-parser": "0.0.9"
+    "commander": "2.8.1"
   },
   "devDependencies": {
     "mocha": "2.2.5",

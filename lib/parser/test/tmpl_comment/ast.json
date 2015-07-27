@@ -1,0 +1,120 @@
+[
+    {
+        "type": "Comment",
+        "content": "\n    Comment content\n    <TMPL_VAR text>\n",
+        "position": {
+            "line": 1,
+            "column": 1
+        }
+    },
+    {
+        "type": "Text",
+        "content": "\n\n",
+        "position": {
+            "line": 4,
+            "column": 16
+        }
+    },
+    {
+        "type": "Tag",
+        "name": "TMPL_VAR",
+        "attributes": [
+            {
+                "type": "SingleAttribute",
+                "name": "b_value",
+                "value": null,
+                "position": {
+                    "line": 6,
+                    "column": 11
+                }
+            }
+        ],
+        "position": {
+            "line": 6,
+            "column": 1
+        }
+    },
+    {
+        "type": "Text",
+        "content": " ",
+        "position": {
+            "line": 6,
+            "column": 19
+        }
+    },
+    {
+        "type": "Comment",
+        "content": " Inline comment",
+        "position": {
+            "line": 6,
+            "column": 20
+        }
+    },
+    {
+        "type": "Comment",
+        "content": " Beginning of line comment <TMPL_VAR b_value>",
+        "position": {
+            "line": 7,
+            "column": 1
+        }
+    },
+    {
+        "type": "Text",
+        "content": "Just a # symbol ",
+        "position": {
+            "line": 9,
+            "column": 1
+        }
+    },
+    {
+        "type": "Tag",
+        "name": "TMPL_VAR",
+        "attributes": [
+            {
+                "type": "SingleAttribute",
+                "name": "b_value",
+                "value": null,
+                "position": {
+                    "line": 9,
+                    "column": 27
+                }
+            }
+        ],
+        "position": {
+            "line": 9,
+            "column": 17
+        }
+    },
+    {
+        "type": "Text",
+        "content": "\n\n",
+        "position": {
+            "line": 9,
+            "column": 35
+        }
+    },
+    {
+        "type": "Comment",
+        "content": " - 1",
+        "position": {
+            "line": 11,
+            "column": 1
+        }
+    },
+    {
+        "type": "Comment",
+        "content": " - 2",
+        "position": {
+            "line": 12,
+            "column": 1
+        }
+    },
+    {
+        "type": "Comment",
+        "content": " - 3",
+        "position": {
+            "line": 13,
+            "column": 1
+        }
+    }
+]

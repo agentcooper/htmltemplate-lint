@@ -1,7 +1,6 @@
-var parser = require('htmltemplate-parser');
-
 var C = require('./lib/constants');
 
+var parser = require('./lib/parser');
 var run = require('./lib/run');
 var rules = require('./rules');
 var problem = require('./lib/problem');
