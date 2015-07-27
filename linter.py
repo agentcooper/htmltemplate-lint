@@ -11,17 +11,17 @@
 """This module exports the HtmltemplateLint plugin class."""
 
 from SublimeLinter.lint import NodeLinter, util
-
+from os.path import dirname, realpath, join
 
 class HtmltemplateLint(NodeLinter):
 
     """Provides an interface to htmltemplate-lint."""
 
     syntax = 'html'
-    cmd = ('htmltemplate-lint', '--oneline', '@')
+    cmd = (join(dirname(realpath(__file__)), 'bin/lint'), '--oneline', '@')
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 1.0'
+    version_requirement = '>= 0.0.1'
     regex = (
         r'^.+?: line (?P<line>\d+), col (?P<col>\d+), '
         r'(?:(?P<error>Error)|(?P<warning>Warning)) - '
@@ -37,4 +37,3 @@ class HtmltemplateLint(NodeLinter):
     inline_settings = None
     inline_overrides = None
     comment_re = r'\s*/[/*]'
-
