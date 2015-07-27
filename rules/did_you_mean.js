@@ -1,66 +1,58 @@
+var Levenshtein = require('levenshtein');
+
 var C = require('../lib/constants');
 var problem = require('../lib/problem');
 
 var RULE_NAME = 'did_you_mean';
-var DID_YOU_MEAN_EXPERIMENT_HASH = 'Did you mean b_experiment_hash?';
-var DID_YOU_MEAN_TRACK_EXPERIMENT = 'Did you mean b_track_experiment?';
 
-var B_EXPERIMENT_HASH_STRING = 'b_experiment_hash';
-var B_EXPERIMENT_HASH_REGEX = /b_ex[a-z]+_h[a-z]{1,3}_/g;
-var B_TRACK_EXPERIMENT_STRING = 'b_track_experiment';
-var B_TRACK_EXPERIMENT_REGEX = /b_t[a-z]{3,4}_ex[a-z]+_/g;
+var mistyped = [
+    {
+        search: 'b_experiment_hash',
+        rx: /b_ex[a-z]+_h[a-z]{1,3}_/g,
+        message: 'Did you mean b_experiment_hash?'
+    },
+    {
+        search: 'b_track_experiment',
+        rx: /b_t[a-z]{3,4}_ex[a-z]+_/g,
+        message: 'Did you mean b_track_experiment?'
+    }
+];
 
 module.exports = {
     run: function(node, done) {
-        if (node.type === 'SingleAttribute') {
-            if (isMistypedBExperimentHash(node.name)) {
+        var content = getContent(node);
+
+        if (!content) {
+            return;
+        }
+
+        for (var i = 0; i < mistyped.length; i++) {
+            var distance = (
+                new Levenshtein(
+                    // @TODO: is there another way, without slicing?
+                    content.slice(0, mistyped[i].search.length),
+                    mistyped[i].search
+                )
+            ).distance;
+
+            // @FIXME: find a good range
+            if (distance > 0 && distance < 5) {
                 return done(
                     problem(
                         RULE_NAME,
                         C.RESULT_TYPES.WARNING,
-                        DID_YOU_MEAN_EXPERIMENT_HASH,
-                        node
-                    )
-                );
-            } else if (isMistypedBTrackExperiment(node.name)) {
-                return done(
-                    problem(
-                        RULE_NAME,
-                        C.RESULT_TYPES.WARNING,
-                        DID_YOU_MEAN_TRACK_EXPERIMENT,
+                        mistyped[i].message,
                         node
                     )
                 );
             }
-        }
 
-        if (node.type === 'PairAttribute' && (typeof node.value === 'string') && isMistypedBExperimentHash(node.value)) {
-            return done(
-                problem(
-                    RULE_NAME,
-                    C.RESULT_TYPES.WARNING,
-                    DID_YOU_MEAN_EXPERIMENT_HASH,
-                    node
-                )
-            );
-        }
-
-        if (node.type === 'Expression') {
-            if (isMistypedBExperimentHash(node.value)) {
+            if (isMistyped(content, mistyped[i].rx, mistyped[i].search)) {
                 return done(
                     problem(
                         RULE_NAME,
                         C.RESULT_TYPES.WARNING,
-                        DID_YOU_MEAN_EXPERIMENT_HASH,
-                        node
-                    )
-                );
-            } else if (isMistypedBTrackExperiment(node.value)) {
-                return done(
-                    problem(
-                        RULE_NAME,
-                        C.RESULT_TYPES.WARNING,
-                        DID_YOU_MEAN_TRACK_EXPERIMENT,
+                        mistyped[i].message,
                         node
                     )
                 );
@@ -73,16 +65,22 @@ module.exports = {
     }
 };
 
-function isMistypedBExperimentHash(string) {
-    return (
-        string.match(B_EXPERIMENT_HASH_REGEX) &&
-        string.indexOf(B_EXPERIMENT_HASH_STRING) === -1
-    );
+function getContent(node) {
+    if (node.type === 'SingleAttribute') {
+        return node.name;
+    }
+    if (node.type === 'PairAttribute' && (typeof node.value === 'string')) {
+        return node.value;
+    }
+    if (node.type === 'Expression') {
+        return node.value;
+    }
+    return null;
 }
 
-function isMistypedBTrackExperiment(string) {
+function isMistyped(string, rx, search) {
     return (
-        string.match(B_TRACK_EXPERIMENT_REGEX) &&
-        string.indexOf(B_TRACK_EXPERIMENT_STRING) === -1
+        string.match(rx) &&
+        string.indexOf(search) === -1
     );
 }
