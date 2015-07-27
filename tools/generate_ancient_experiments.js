@@ -31,7 +31,7 @@ getCredentials(function(err, credentials) {
         var ancient = getAncientExperiments(data.experiment);
 
         fs.writeFileSync(
-            path.join(__dirname, 'ancients.json'),
+            path.join(__dirname, '..', 'rules', 'no_ancient_experiments', 'ancients.json'),
             JSON.stringify(
                 ancient, null, 2)
         );

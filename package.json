@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/test.js",
-    "generate-ancients": "node rules/no_ancient_experiments/generate.js"
+    "generate-ancients": "node tools/generate_ancient_experiments.js"
   },
   "author": "",
   "license": "ISC",
