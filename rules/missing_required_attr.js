@@ -3,53 +3,48 @@ var problem = require('../lib/problem');
 
 var RULE_NAME = 'missing_required_attr';
 
-module.exports = {
-    run: function(node, done) {
-        var requiresNameAttribute = (
-            node.name === 'TMPL_VAR' ||
-            node.name === 'TMPL_SETVAR' ||
-            node.name === 'TMPL_INCLUDE' ||
-            node.name === 'TMPL_INLINE' ||
-            node.name === 'TMPL_V' ||
-            node.name === 'TMPL_BLOCK'
-        );
+function setup(REQUIRED_ATTR) {
+    return {
+        run: function(node, done) {
+            var requiresNameAttribute = REQUIRED_ATTR[node.name];
 
-        if (requiresNameAttribute && !hasNameOrLowerCaseAttribute(node)) {
+            if (requiresNameAttribute && !hasNameOrLowerCaseAttribute(node)) {
+                return done(
+                    problem(
+                        RULE_NAME,
+                        C.RESULT_TYPES.ERROR,
+                        node.name + ' is missing required attribute.',
+                        node
+                    )
+                );
+            }
+
+            if (node.name === 'TMPL_ASSIGN' && node.attributes.length < 2) {
+                return done(
+                    problem(
+                        RULE_NAME,
+                        C.RESULT_TYPES.ERROR,
+                        'TMPL_ASSIGN expects variable name and assigned expression.',
+                        node
+                    )
+                );
+            }
+
+            if (node.type === 'ConditionBranch' && !node.condition) {
+                return done(
+                    problem(
+                        RULE_NAME,
+                        C.RESULT_TYPES.ERROR,
+                        'Condition branch is missing required condition expression.',
+                        node
+                    )
+                );
+            }
+
             return done(
-                problem(
-                    RULE_NAME,
-                    C.RESULT_TYPES.ERROR,
-                    node.name + ' is missing required attribute.',
-                    node
-                )
+                problem(RULE_NAME, C.RESULT_TYPES.NO_PROBLEMS)
             );
         }
-
-        if (node.name === 'TMPL_ASSIGN' && node.attributes.length < 2) {
-            return done(
-                problem(
-                    RULE_NAME,
-                    C.RESULT_TYPES.ERROR,
-                    'TMPL_ASSIGN expects variable name and assigned expression.',
-                    node
-                )
-            );
-        }
-
-        if (node.type === 'ConditionBranch' && !node.condition) {
-            return done(
-                problem(
-                    RULE_NAME,
-                    C.RESULT_TYPES.ERROR,
-                    'Condition branch is missing required condition expression.',
-                    node
-                )
-            );
-        }
-
-        return done(
-            problem(RULE_NAME, C.RESULT_TYPES.NO_PROBLEMS)
-        );
     }
 };
 
@@ -68,3 +63,5 @@ function hasNameOrLowerCaseAttribute(node) {
         );
     });
 }
+
+module.exports = setup;
