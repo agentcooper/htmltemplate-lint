@@ -43,5 +43,50 @@
             "line": 23,
             "column": 1
         }
+    },
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "TMPL_SETVAR is missing required attribute.",
+        "position": {
+            "line": 26,
+            "column": 1
+        }
+    },
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "TMPL_ASSIGN expects variable name and assigned expression.",
+        "position": {
+            "line": 30,
+            "column": 1
+        }
+    },
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "TMPL_ASSIGN expects variable name and assigned expression.",
+        "position": {
+            "line": 31,
+            "column": 1
+        }
+    },
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "Condition branch is missing required condition expression.",
+        "position": {
+            "line": 38,
+            "column": 1
+        }
+    },
+    {
+        "type": "Error",
+        "name": "missing_required_attr",
+        "message": "Condition branch is missing required condition expression.",
+        "position": {
+            "line": 40,
+            "column": 1
+        }
     }
 ]

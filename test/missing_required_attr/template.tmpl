@@ -22,4 +22,23 @@
 <TMPL_V name="b_text">
 <TMPL_V>
 
+<TMPL_SETVAR b_variable>value</TMPL_SETVAR>
+<TMPL_SETVAR></TMPL_SETVAR>
+
+<TMPL_ASSIGN b_value [% $b_text %]>
+<TMPL_ASSIGN b_value b_text>
+<TMPL_ASSIGN b_value>
+<TMPL_ASSIGN [% $b_value %]>
+
+<TMPL_IF b_condition>
+    <TMPL_VAR b_text>
+<TMPL_ELSIF b_condition2>
+    <TMPL_VAR b_text2>
+</TMPL_IF>
+<TMPL_IF>
+    <TMPL_VAR b_text>
+<TMPL_ELSIF>
+    <TMPL_VAR b_text>
+</TMPL_IF>
+
 <TMPL_MARKER END>

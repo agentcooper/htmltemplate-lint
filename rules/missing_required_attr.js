@@ -7,23 +7,44 @@ module.exports = {
     run: function(node, done) {
         var requiresNameAttribute = (
             node.name === 'TMPL_VAR' ||
+            node.name === 'TMPL_SETVAR' ||
             node.name === 'TMPL_INCLUDE' ||
             node.name === 'TMPL_INLINE' ||
             node.name === 'TMPL_V' ||
             node.name === 'TMPL_BLOCK'
         );
 
-        if (requiresNameAttribute) {
-            if (!hasNameOrLowerCaseAttribute(node)) {
-                return done(
-                    problem(
-                        RULE_NAME,
-                        C.RESULT_TYPES.ERROR,
-                        node.name + ' is missing required attribute.',
-                        node
-                    )
-                );
-            }
+        if (requiresNameAttribute && !hasNameOrLowerCaseAttribute(node)) {
+            return done(
+                problem(
+                    RULE_NAME,
+                    C.RESULT_TYPES.ERROR,
+                    node.name + ' is missing required attribute.',
+                    node
+                )
+            );
+        }
+
+        if (node.name === 'TMPL_ASSIGN' && node.attributes.length < 2) {
+            return done(
+                problem(
+                    RULE_NAME,
+                    C.RESULT_TYPES.ERROR,
+                    'TMPL_ASSIGN expects variable name and assigned expression.',
+                    node
+                )
+            );
+        }
+
+        if (node.type === 'ConditionBranch' && !node.condition) {
+            return done(
+                problem(
+                    RULE_NAME,
+                    C.RESULT_TYPES.ERROR,
+                    'Condition branch is missing required condition expression.',
+                    node
+                )
+            );
         }
 
         return done(
