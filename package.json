@@ -6,7 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/test.js",
-    "generate-ancients": "node tools/generate_ancient_experiments.js"
+    "generate-ancients": "node tools/generate_ancient_experiments.js",
+    "release": "npm run generate-ancients && node tools/release.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "mocha": "2.2.5",
     "read": "1.0.6",
-    "request": "2.60.0"
+    "request": "2.60.0",
+    "sync-exec": "0.6.1"
   }
 }
