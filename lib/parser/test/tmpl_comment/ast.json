@@ -60,10 +60,10 @@
     },
     {
         "type": "Text",
-        "content": "Just a # symbol ",
+        "content": "\nJust a # symbol ",
         "position": {
-            "line": 9,
-            "column": 1
+            "line": 8,
+            "column": 47
         }
     },
     {
@@ -115,6 +115,30 @@
         "position": {
             "line": 13,
             "column": 1
+        }
+    },
+    {
+        "type": "Comment",
+        "content": " First line comment, issue #29",
+        "position": {
+            "line": 14,
+            "column": 1
+        }
+    },
+    {
+        "type": "Comment",
+        "content": " <TMPL_VAR b_text>",
+        "position": {
+            "line": 15,
+            "column": 1
+        }
+    },
+    {
+        "type": "Text",
+        "content": "\n",
+        "position": {
+            "line": 16,
+            "column": 20
         }
     }
 ]
