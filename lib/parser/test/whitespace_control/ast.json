@@ -1,0 +1,220 @@
+[
+    {
+        "type": "Tag",
+        "name": "TMPL_SETVAR",
+        "attributes": [
+            {
+                "type": "SingleAttribute",
+                "name": "b_text",
+                "value": null,
+                "position": {
+                    "line": 1,
+                    "column": 14
+                }
+            }
+        ],
+        "content": [
+            {
+                "type": "Text",
+                "content": "\n    ",
+                "position": {
+                    "line": 1,
+                    "column": 23
+                }
+            },
+            {
+                "type": "Tag",
+                "name": "TMPL_VAR",
+                "attributes": [
+                    {
+                        "type": "SingleAttribute",
+                        "name": "b_value",
+                        "value": null,
+                        "position": {
+                            "line": 2,
+                            "column": 15
+                        }
+                    }
+                ],
+                "position": {
+                    "line": 2,
+                    "column": 5
+                }
+            },
+            {
+                "type": "Text",
+                "content": "\n",
+                "position": {
+                    "line": 2,
+                    "column": 23
+                }
+            }
+        ],
+        "position": {
+            "line": 1,
+            "column": 1
+        }
+    },
+    {
+        "type": "Text",
+        "content": "\n\n",
+        "position": {
+            "line": 3,
+            "column": 16
+        }
+    },
+    {
+        "type": "Condition",
+        "name": "TMPL_IF",
+        "conditions": [
+            {
+                "type": "ConditionBranch",
+                "condition": {
+                    "type": "SingleAttribute",
+                    "name": "b_condition",
+                    "value": null,
+                    "position": {
+                        "line": 5,
+                        "column": 10
+                    }
+                },
+                "content": [
+                    {
+                        "type": "Text",
+                        "content": "\n    some_class_name\n",
+                        "position": {
+                            "line": 5,
+                            "column": 24
+                        }
+                    }
+                ],
+                "position": {
+                    "line": 5,
+                    "column": 1
+                }
+            }
+        ],
+        "otherwise": null,
+        "position": {
+            "line": 5,
+            "column": 1
+        }
+    },
+    {
+        "type": "Text",
+        "content": "\n\n",
+        "position": {
+            "line": 7,
+            "column": 12
+        }
+    },
+    {
+        "type": "Condition",
+        "name": "TMPL_IF",
+        "conditions": [
+            {
+                "type": "ConditionBranch",
+                "condition": {
+                    "type": "SingleAttribute",
+                    "name": "b_condition",
+                    "value": null,
+                    "position": {
+                        "line": 9,
+                        "column": 10
+                    }
+                },
+                "content": [
+                    {
+                        "type": "Text",
+                        "content": "\n    some_class_name\n",
+                        "position": {
+                            "line": 9,
+                            "column": 25
+                        }
+                    }
+                ],
+                "position": {
+                    "line": 9,
+                    "column": 1
+                }
+            }
+        ],
+        "otherwise": null,
+        "position": {
+            "line": 9,
+            "column": 1
+        }
+    },
+    {
+        "type": "Text",
+        "content": "\n\n",
+        "position": {
+            "line": 11,
+            "column": 13
+        }
+    },
+    {
+        "type": "Tag",
+        "name": "TMPL_SETVAR",
+        "attributes": [
+            {
+                "type": "SingleAttribute",
+                "name": "b_text",
+                "value": null,
+                "position": {
+                    "line": 13,
+                    "column": 14
+                }
+            }
+        ],
+        "content": [
+            {
+                "type": "Text",
+                "content": "\n    ",
+                "position": {
+                    "line": 13,
+                    "column": 24
+                }
+            },
+            {
+                "type": "Tag",
+                "name": "TMPL_VAR",
+                "attributes": [
+                    {
+                        "type": "SingleAttribute",
+                        "name": "b_value",
+                        "value": null,
+                        "position": {
+                            "line": 14,
+                            "column": 15
+                        }
+                    }
+                ],
+                "position": {
+                    "line": 14,
+                    "column": 5
+                }
+            },
+            {
+                "type": "Text",
+                "content": "\n",
+                "position": {
+                    "line": 14,
+                    "column": 23
+                }
+            }
+        ],
+        "position": {
+            "line": 13,
+            "column": 1
+        }
+    },
+    {
+        "type": "Text",
+        "content": "\n",
+        "position": {
+            "line": 15,
+            "column": 17
+        }
+    }
+]

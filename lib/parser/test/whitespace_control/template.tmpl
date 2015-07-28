@@ -1,0 +1,15 @@
+<TMPL_SETVAR b_text ~>
+    <TMPL_VAR b_value>
+<~/TMPL_SETVAR>
+
+<TMPL_IF b_condition ->
+    some_class_name
+<-/TMPL_IF>
+
+<TMPL_IF b_condition .~>
+    some_class_name
+<~./TMPL_IF>
+
+<TMPL_SETVAR b_text |~>
+    <TMPL_VAR b_value>
+<~|/TMPL_SETVAR>
