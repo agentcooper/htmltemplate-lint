@@ -1,7 +1,7 @@
 [
     {
         "type": "Warning",
-        "name": "b_before_variable_name",
+        "name": "variable_name_style",
         "message": "Variables in templates should start with b_.",
         "position": {
             "line": 3,
@@ -10,7 +10,7 @@
     },
     {
         "type": "Warning",
-        "name": "b_before_variable_name",
+        "name": "variable_name_style",
         "message": "Variables in templates should start with b_.",
         "position": {
             "line": 9,

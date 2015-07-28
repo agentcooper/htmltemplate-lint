@@ -1,15 +1,27 @@
-module.exports = [
-    require('./rules/b_before_variable_name'),
-    require('./rules/did_you_mean'),
-    require('./rules/missing_required_attr'),
-    require('./rules/no_ancient_experiments'),
-    require('./rules/no_complex_unless'),
-    require('./rules/no_empty_condition'),
-    require('./rules/no_generate_variant'),
-    require('./rules/no_html_commented_tags'),
-    require('./rules/no_invalid_tags'),
-    require('./rules/no_nested_setvar'),
-    require('./rules/no_tmpl_loop'),
-    require('./rules/no_verbose_assignment'),
-    require('./rules/wrap_in_markers')
+var bookingConfig = require('./booking-config');
+
+var rules = [
+    'variable_name_style',
+    'did_you_mean',
+    'missing_required_attr',
+    'no_ancient_experiments',
+    'no_complex_unless',
+    'no_empty_condition',
+    'no_generate_variant',
+    'no_html_commented_tags',
+    'no_invalid_tags',
+    'no_nested_setvar',
+    'no_tmpl_loop',
+    'no_verbose_assignment',
+    'wrap_in_markers'
 ];
+
+module.exports = rules.map(function(rule) {
+    var ruleObj = require('./rules/' + rule);
+
+    if (bookingConfig[rule] && typeof ruleObj === 'function') {
+        return ruleObj(bookingConfig[rule]);
+    }
+
+    return ruleObj;
+});
