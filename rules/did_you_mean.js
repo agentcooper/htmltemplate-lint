@@ -5,15 +5,15 @@ var problem = require('../lib/problem');
 
 var RULE_NAME = 'did_you_mean';
 
+var PERL_IDENTIFIER = /\$[_0-9a-zA-Z]+/g;
+
 var mistyped = [
     {
         search: 'b_experiment_hash',
-        rx: /b_ex[a-z]+_h[a-z]{1,3}_/g,
         message: 'Did you mean b_experiment_hash?'
     },
     {
         search: 'b_track_experiment',
-        rx: /b_t[a-z]{3,4}_ex[a-z]+_/g,
         message: 'Did you mean b_track_experiment?'
     }
 ];
@@ -22,40 +22,31 @@ module.exports = {
     run: function(node, done) {
         var content = getContent(node);
 
-        if (!content) {
+        if (content.length === 0) {
             return;
         }
 
-        for (var i = 0; i < mistyped.length; i++) {
-            var distance = (
-                new Levenshtein(
-                    // @TODO: is there another way, without slicing?
-                    content.slice(0, mistyped[i].search.length),
-                    mistyped[i].search
-                )
-            ).distance;
-
-            // @FIXME: find a good range
-            if (distance > 0 && distance < 5) {
-                return done(
-                    problem(
-                        RULE_NAME,
-                        C.RESULT_TYPES.WARNING,
-                        mistyped[i].message,
-                        node
+        for (var j = 0; j < content.length; j++) {
+            for (var i = 0; i < mistyped.length; i++) {
+                var distance = (
+                    new Levenshtein(
+                        // @TODO: is there another way, without slicing?
+                        content[j].slice(0, mistyped[i].search.length),
+                        mistyped[i].search
                     )
-                );
-            }
+                ).distance;
 
-            if (isMistyped(content, mistyped[i].rx, mistyped[i].search)) {
-                return done(
-                    problem(
-                        RULE_NAME,
-                        C.RESULT_TYPES.WARNING,
-                        mistyped[i].message,
-                        node
-                    )
-                );
+                // @FIXME: find a good range
+                if (distance > 0 && distance < 5) {
+                    return done(
+                        problem(
+                            RULE_NAME,
+                            C.RESULT_TYPES.WARNING,
+                            mistyped[i].message,
+                            node
+                        )
+                    );
+                }
             }
         }
 
@@ -67,20 +58,21 @@ module.exports = {
 
 function getContent(node) {
     if (node.type === 'SingleAttribute') {
-        return node.name;
+        return [node.name];
     }
     if (node.type === 'PairAttribute' && (typeof node.value === 'string')) {
-        return node.value;
+        return [node.value];
     }
     if (node.type === 'Expression') {
-        return node.value;
-    }
-    return null;
-}
+        var match = node.value.match(PERL_IDENTIFIER);
 
-function isMistyped(string, rx, search) {
-    return (
-        string.match(rx) &&
-        string.indexOf(search) === -1
-    );
+        if (!match) {
+            return [];
+        }
+
+        return match.map(function(expr) {
+            return expr && expr.replace('$', '');
+        });
+    }
+    return [];
 }
