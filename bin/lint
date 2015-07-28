@@ -27,18 +27,20 @@ var extenstions = {
 
 function output(res, filepath) {
     if (program.oneline) {
-        console.log(
+        return console.log(
             linterReport(res, filepath)
         );
-    } if (program.json) {
-        console.log(
+    }
+
+    if (program.json) {
+        return console.log(
             JSON.stringify(res, null, 4)
         );
-    } else {
-        console.log(
-            inspect(res, { colors: true, depth: Infinity })
-        );
     }
+
+    console.log(
+        inspect(res, { colors: true, depth: Infinity })
+    );
 }
 
 var walker = walk.walk(filepath, { followLinks: false });
