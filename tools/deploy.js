@@ -24,10 +24,10 @@ if (isAlreadyReleased(releases, pkg.version)) {
 
 // Updating releases list.
 releases.push({
+    sublime_text: '*',
     version: pkg.version,
     url: format('https://%s/%s/%s', PACKAGES_HOST, PACKAGES_PATH, bundledFilename),
-    date: formatDate(new Date()),
-    sublime_text: '*'
+    date: formatDate(new Date())
 });
 
 fs.writeFileSync(

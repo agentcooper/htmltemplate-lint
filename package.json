@@ -7,7 +7,7 @@
   "scripts": {
     "test": "mocha test/test.js",
     "generate-ancients": "node tools/generate_ancient_experiments.js",
-    "release": "npm run generate-ancients && node tools/release.js"
+    "deploy": "node tools/deploy.js"
   },
   "author": "",
   "license": "ISC",
