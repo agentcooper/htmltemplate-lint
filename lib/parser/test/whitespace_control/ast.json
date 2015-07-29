@@ -211,10 +211,119 @@
     },
     {
         "type": "Text",
-        "content": "\n",
+        "content": "\n\n",
         "position": {
             "line": 15,
             "column": 17
+        }
+    },
+    {
+        "type": "Tag",
+        "name": "TMPL_SETVAR",
+        "attributes": [
+            {
+                "type": "SingleAttribute",
+                "name": "b_class_name",
+                "value": null,
+                "position": {
+                    "line": 17,
+                    "column": 14
+                }
+            }
+        ],
+        "content": [
+            {
+                "type": "Text",
+                "content": "\n    btn\n    btn_",
+                "position": {
+                    "line": 17,
+                    "column": 29
+                }
+            },
+            {
+                "type": "Tag",
+                "name": "TMPL_VAR",
+                "attributes": [
+                    {
+                        "type": "SingleAttribute",
+                        "name": "b_modifier",
+                        "value": null,
+                        "position": {
+                            "line": 19,
+                            "column": 19
+                        }
+                    }
+                ],
+                "position": {
+                    "line": 19,
+                    "column": 9
+                }
+            },
+            {
+                "type": "Text",
+                "content": "\n    ",
+                "position": {
+                    "line": 19,
+                    "column": 30
+                }
+            },
+            {
+                "type": "Condition",
+                "name": "TMPL_IF",
+                "conditions": [
+                    {
+                        "type": "ConditionBranch",
+                        "condition": {
+                            "type": "SingleAttribute",
+                            "name": "b_cta",
+                            "value": null,
+                            "position": {
+                                "line": 20,
+                                "column": 16
+                            }
+                        },
+                        "content": [
+                            {
+                                "type": "Text",
+                                "content": " btn_cta",
+                                "position": {
+                                    "line": 20,
+                                    "column": 22
+                                }
+                            }
+                        ],
+                        "position": {
+                            "line": 20,
+                            "column": 5
+                        }
+                    }
+                ],
+                "otherwise": null,
+                "position": {
+                    "line": 20,
+                    "column": 5
+                }
+            },
+            {
+                "type": "Text",
+                "content": "\n",
+                "position": {
+                    "line": 20,
+                    "column": 40
+                }
+            }
+        ],
+        "position": {
+            "line": 17,
+            "column": 1
+        }
+    },
+    {
+        "type": "Text",
+        "content": "\n",
+        "position": {
+            "line": 21,
+            "column": 16
         }
     }
 ]
