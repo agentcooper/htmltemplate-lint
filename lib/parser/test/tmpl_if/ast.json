@@ -80,6 +80,14 @@
         }
     },
     {
+        "type": "Text",
+        "content": "\n",
+        "position": {
+            "line": 5,
+            "column": 61
+        }
+    },
+    {
         "type": "Condition",
         "name": "TMPL_IF",
         "conditions": [

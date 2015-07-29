@@ -5,13 +5,9 @@ var RULE_NAME = 'no_html_commented_tags';
 
 module.exports = {
     run: function(node, done) {
-
         if (node.type === 'Text' && hasUnclosedHTMLComment(node.content)) {
-            var parentContent = node.parent;
-
-            if (parentContent.type === 'ConditionBranch' || parentContent.type === 'AlternateConditionBranch') {
-                parentContent = parentContent.content;
-            }
+            var parent = node.parent;
+            var parentContent = Array.isArray(parent) ? parent : parent.content;
 
             var index = parentContent.indexOf(node);
 

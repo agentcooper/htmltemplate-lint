@@ -5,7 +5,7 @@
         "attributes": [
             {
                 "type": "SingleAttribute",
-                "name": "b_value",
+                "name": "b_object.b_key",
                 "value": null,
                 "position": {
                     "line": 1,
@@ -23,7 +23,7 @@
         "content": "\n\n",
         "position": {
             "line": 1,
-            "column": 20
+            "column": 27
         }
     },
     {

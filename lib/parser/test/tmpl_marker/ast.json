@@ -35,6 +35,14 @@
         }
     },
     {
+        "type": "Text",
+        "content": "\n",
+        "position": {
+            "line": 3,
+            "column": 21
+        }
+    },
+    {
         "type": "Tag",
         "name": "TMPL_VAR",
         "attributes": [

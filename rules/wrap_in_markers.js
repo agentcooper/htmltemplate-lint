@@ -10,7 +10,13 @@ module.exports = {
             for (var i = 0; i < node.length; i += 1) {
                 var child = node[i];
 
-                if (child.name === 'TMPL_MARKER' && child.attributes[0].name === 'START') {
+                var hasReachedCorrectStartMarker = (
+                    child.name === 'TMPL_MARKER' &&
+                    child.attributes.length > 0 &&
+                    child.attributes[0].name === 'START'
+                );
+
+                if (hasReachedCorrectStartMarker) {
                     break;
                 }
 
@@ -29,7 +35,13 @@ module.exports = {
             for (var i = (node.length - 1); i >= 0; i -= 1) {
                 var child = node[i];
 
-                if (child.name === 'TMPL_MARKER' && child.attributes[0].name === 'END') {
+                var hasReachedCorrectEndMarker = (
+                    child.name === 'TMPL_MARKER' &&
+                    child.attributes.length > 0 &&
+                    child.attributes[0].name === 'END'
+                );
+
+                if (hasReachedCorrectEndMarker) {
                     break;
                 }
 
