@@ -61,7 +61,7 @@ function hasNameOrLowerCaseAttribute(node) {
                 attr.name.match(/[a-z0-9_]/g)
             ) || (
                 attr.type === 'PairAttribute' &&
-                attr.name === 'name'
+                attr.name.toLowerCase() === 'name'
             ) || (
                 attr.type === 'Expression'
             )
