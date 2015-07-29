@@ -21,7 +21,6 @@
         "key-spacing": 0,
         "new-cap": [2, {"capIsNewExceptions": ["Deferred"]}],
         "no-alert": 0,
-        "no-console": 1,
         "no-extra-parens": 0,
         "no-fallthrough": 0,
         "no-mixed-spaces-and-tabs": 2,

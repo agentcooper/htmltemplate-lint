@@ -9,7 +9,7 @@ var program = require('commander');
 var walk = require('walk');
 
 var linter = require('..');
-var linterReport = require('../lib/linter_report');
+var formatAsOneline = require('../lib/linter_report');
 
 program
     .version(require('../package.json').version)
@@ -25,21 +25,27 @@ var extenstions = {
     '.tmpl': 1
 };
 
-function output(res, filepath) {
+function output(report, filepath) {
     if (program.oneline) {
-        return console.log(
-            linterReport(res, filepath)
-        );
+        if (report.length > 0) {
+            console.log(
+                formatAsOneline(report, filepath)
+            );
+        }
+
+        return;
     }
 
     if (program.json) {
-        return console.log(
-            JSON.stringify(res, null, 4)
+        console.log(
+            JSON.stringify(report, null, 4)
         );
+
+        return;
     }
 
     console.log(
-        inspect(res, { colors: true, depth: Infinity })
+        inspect(report, { colors: true, depth: Infinity })
     );
 }
 
@@ -64,15 +70,3 @@ walker
     console.error(nodeStatsArray);
     next();
 });
-
-function printError(message, error) {
-    console.log('');
-    console.log('  error: ' + message);
-
-    if (error) {
-        console.log('');
-        console.log('  ' + error.toString());
-    }
-
-    console.log('');
-}
