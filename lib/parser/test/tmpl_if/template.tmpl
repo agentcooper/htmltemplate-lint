@@ -2,7 +2,8 @@
     <TMPL_VAR b_value>
 </TMPL_IF>
 
-<TMPL_IF [% $b_condition eq 'ok' %]>
+## No whitespace before condition expression is intentional.
+<TMPL_IF[% $b_condition eq 'ok' %]>
     OK
 <TMPL_ELSIF b_loading>
     Loading
