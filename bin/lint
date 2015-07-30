@@ -1,20 +1,23 @@
 #!/usr/bin/env node
 
 var fs = require('fs');
-var util = require('util');
 var path = require('path');
-var inspect = util.inspect;
+var inspect = require('util').inspect;
+
 var program = require('commander');
 
 var walk = require('walk');
 
+var C = require('../lib/constants');
 var linter = require('..');
 var formatAsOneline = require('../lib/linter_report');
+var analytics = require('../lib/analytics');
 
 program
     .version(require('../package.json').version)
-    .option('--oneline', 'SublimeLinter-compatible output')
-    .option('--json', 'JSON output')
+    .option('--oneline', 'output one item per line')
+    .option('--json', 'output JSON')
+    .option('--track-usage', 'send anonymous usage reports')
     .usage('<file ...>')
     .parse(process.argv);
 
@@ -26,6 +29,14 @@ var extenstions = {
 };
 
 function output(report, filepath) {
+    if (program.trackUsage) {
+        analytics(
+            'Lint file',
+            report.filter(function(e) { return e.type === C.RESULT_TYPES.WARNING; }).length,
+            report.filter(function(e) { return e.type === C.RESULT_TYPES.ERROR; }).length
+        );
+    }
+
     if (program.oneline) {
         if (report.length > 0) {
             console.log(
@@ -69,4 +80,9 @@ walker
 .on('errors', function(root, nodeStatsArray, next) {
     console.error(nodeStatsArray);
     next();
+})
+.on('end', function() {
+    if (program.trackUsage) {
+        process.exit();
+    }
 });

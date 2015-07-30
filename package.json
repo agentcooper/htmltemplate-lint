@@ -14,12 +14,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "analytics-node": "1.2.2",
     "commander": "2.8.1",
-    "levenshtein": "^1.0.5",
-    "walk": "^2.3.9"
+    "levenshtein": "1.0.5",
+    "node-uuid": "1.4.3",
+    "walk": "2.3.9"
   },
   "devDependencies": {
-    "husky": "^0.9.1",
+    "husky": "0.9.1",
     "mocha": "2.2.5",
     "read": "1.0.6",
     "request": "2.60.0",
