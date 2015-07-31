@@ -17,8 +17,8 @@ class HtmltemplateLint(NodeLinter):
 
     """Provides an interface to htmltemplate-lint."""
 
-    syntax = 'html'
-    cmd = (join(dirname(realpath(__file__)), 'bin/lint'), '--oneline', '--track-usage', '@')
+    syntax = ('html', 'syntaxtmpl')
+    cmd = ('node', join(dirname(realpath(__file__)), 'bin/lint'), '--oneline', '--track-usage', '@')
     version_args = '--version'
     version_re = r'(?P<version>\d+\.\d+\.\d+)'
     version_requirement = '>= 0.0.1'
