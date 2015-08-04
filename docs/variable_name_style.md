@@ -1,9 +1,9 @@
-## Prefix variables name with b_ (b_before_variable_name)
+## Prefix variables name with b_ or fe_ (variable_name_style)
 
-Warns when template-defined variables are not prefixed with `b_`. Temporary
-variables that are created in templates should be prefixed to avoid collisions
-with copy tags. Additionally, variables starting with `b_` are more efficient
-because no copy tag lookup is performed for them.
+Warns when template-defined variables are not prefixed with `b_` or `fe_`.
+Temporary variables that are created in templates should be prefixed to avoid
+collisions with copy tags. Additionally, variables starting with `b_` are more
+efficient because no copy tag lookup is performed for them.
 
 When a parameter has to be provided to the copy tag it is better to pass that
 parameter directly on the corresponding `TMPL_VAR` tag, for example:

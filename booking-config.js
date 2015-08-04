@@ -5,9 +5,9 @@ module.exports = {
             'TMPL_ASSIGN': 1
         },
         match: function(name) {
-            return name.indexOf('b_') !== 0;
+            return !name.match(/^(?:b|fe)_/);
         },
-        message: 'Variables in templates should start with b_.'
+        message: 'Variables in templates should start with b_ or fe_.'
     },
 
     did_you_mean: {

@@ -7,6 +7,9 @@
     <TMPL_VAR b_text>
 </TMPL_SETVAR>
 <TMPL_ASSIGN text b_text>
-<TMPL_ASSIGN b_text2 text>
+<TMPL_ASSIGN fe_text2 text>
 <TMPL_ASSIGN b_text2 [% $b_text %]>
+<TMPL_SETVAR fe_text>
+    <TMPL_VAR b_text>
+</TMPL_SETVAR>
 <TMPL_MARKER END>
