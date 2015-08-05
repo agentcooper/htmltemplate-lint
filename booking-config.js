@@ -7,7 +7,7 @@ module.exports = {
         match: function(name) {
             return !name.match(/^(?:b|fe)_/);
         },
-        message: 'Variables in templates should start with b_ or fe_.'
+        message: 'Prefix local variables with b_ or fe_. Pass variables for copy tags as attributes to TMPL_VAR'
     },
 
     did_you_mean: {
