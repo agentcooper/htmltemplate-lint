@@ -7,6 +7,7 @@ var KNOWN_TAGS = [
     // These tags are secret for the public:
     'TMPL_CSRF_TOKEN',
     'TMPL_CSRF_FORM',
+    'TMPL_PROVIDE_CLIENT_DATA',
     // These tags are not implemented by the parser:
     'TMPL_CASE',
     'TMPL_WHEN',
