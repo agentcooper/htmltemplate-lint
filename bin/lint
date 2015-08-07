@@ -28,12 +28,20 @@ var extenstions = {
     '.tmpl': 1
 };
 
+function isError(e) {
+    return e.type === C.RESULT_TYPES.ERROR;
+}
+
+function isWarning(e) {
+    return e.type === C.RESULT_TYPES.WARNING;
+}
+
 function output(report, filepath) {
     if (program.trackUsage) {
         analytics(
             'Lint file',
-            report.filter(function(e) { return e.type === C.RESULT_TYPES.WARNING; }).length,
-            report.filter(function(e) { return e.type === C.RESULT_TYPES.ERROR; }).length
+            report.filter(isWarning).length,
+            report.filter(isError).length
         );
     }
 
@@ -61,6 +69,7 @@ function output(report, filepath) {
 }
 
 var walker = walk.walk(filepath, { followLinks: false });
+var errorsFound = false;
 
 walker
 .on('file', function(root, fileStats, next) {
@@ -73,6 +82,7 @@ walker
     var fullPath = path.join(root, fileStats.name);
 
     linter(fs.readFileSync(fullPath, 'utf8'), function(res) {
+        errorsFound = errorsFound || res.some(isError);
         output(res, fullPath);
         next();
     });
@@ -82,7 +92,5 @@ walker
     next();
 })
 .on('end', function() {
-    if (program.trackUsage) {
-        process.exit();
-    }
+    process.exit(errorsFound ? 1 : 0);
 });
