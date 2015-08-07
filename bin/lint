@@ -16,6 +16,7 @@ var analytics = require('../lib/analytics');
 program
     .version(require('../package.json').version)
     .option('--oneline', 'output one item per line')
+    .option('--suppress-warnings', 'out put errors only')
     .option('--json', 'output JSON')
     .option('--track-usage', 'send anonymous usage reports')
     .usage('<file ...>')
@@ -43,6 +44,10 @@ function output(report, filepath) {
             report.filter(isWarning).length,
             report.filter(isError).length
         );
+    }
+
+    if (program.suppressWarnings) {
+        report = report.filter(isError);
     }
 
     if (program.oneline) {
