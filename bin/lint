@@ -24,6 +24,12 @@ program
 
 var filepath = program.args[0];
 
+if (!filepath) {
+    console.log("File name was not provided, aborting");
+    program.outputHelp();
+    process.exit(2);
+}
+
 var extenstions = {
     '.inc': 1,
     '.tmpl': 1
