@@ -24,7 +24,7 @@ module.exports = {
             return done(
                 problem(
                     RULE_NAME,
-                    C.RESULT_TYPES.ERROR,
+                    C.RESULT_TYPES.WARNING,
                     'b_generate_variant_for_js_tracking is deprecated.',
                     node
                 )
@@ -38,5 +38,5 @@ module.exports = {
 };
 
 function mentionsGenerateVariant(string) {
-    return string.indexOf(GENERATE_VARIANT_VARIABLE_PREFIX) !== -1
+    return string.indexOf(GENERATE_VARIANT_VARIABLE_PREFIX) !== -1;
 }
