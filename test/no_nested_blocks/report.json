@@ -1,0 +1,47 @@
+[
+    {
+        "type": "Warning",
+        "name": "no_nested_blocks",
+        "message": "Do not put TMPL_BLOCK inside conditionals.",
+        "position": {
+            "line": 8,
+            "column": 5
+        }
+    },
+    {
+        "type": "Warning",
+        "name": "no_nested_blocks",
+        "message": "Do not put TMPL_BLOCK inside conditionals.",
+        "position": {
+            "line": 12,
+            "column": 5
+        }
+    },
+    {
+        "type": "Warning",
+        "name": "no_nested_blocks",
+        "message": "Do not put TMPL_BLOCK inside loops.",
+        "position": {
+            "line": 18,
+            "column": 5
+        }
+    },
+    {
+        "type": "Warning",
+        "name": "no_nested_blocks",
+        "message": "Do not put TMPL_BLOCK inside loops.",
+        "position": {
+            "line": 24,
+            "column": 5
+        }
+    },
+    {
+        "type": "Warning",
+        "name": "no_tmpl_loop",
+        "message": "It is better to use TMPL_FOR instead.",
+        "position": {
+            "line": 23,
+            "column": 1
+        }
+    }
+]

@@ -1,0 +1,29 @@
+<TMPL_MARKER START>
+
+<TMPL_BLOCK outer_block_name>
+    <TMPL_VAR b_text>
+</TMPL_BLOCK>
+
+<TMPL_IF b_condition>
+    <TMPL_BLOCK block_name>
+        <TMPL_VAR b_text>
+    </TMPL_BLOCK>
+<TMPL_ELSE>
+    <TMPL_BLOCK block_name>
+        <TMPL_VAR b_text2>
+    </TMPL_BLOCK>
+</TMPL_IF>
+
+<TMPL_FOR b_item IN=b_array>
+    <TMPL_BLOCK for_block_name>
+        <TMPL_VAR b_text>
+    </TMPL_BLOCK>
+</TMPL_FOR>
+
+<TMPL_LOOP b_array>
+    <TMPL_BLOCK for_block_name>
+        <TMPL_VAR b_text>
+    </TMPL_BLOCK>
+</TMPL_LOOP>
+
+<TMPL_MARKER END>
