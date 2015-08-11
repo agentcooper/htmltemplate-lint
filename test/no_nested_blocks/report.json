@@ -43,5 +43,14 @@
             "line": 23,
             "column": 1
         }
+    },
+    {
+        "type": "Warning",
+        "name": "no_nested_blocks",
+        "message": "Do not put TMPL_BLOCK inside conditionals.",
+        "position": {
+            "line": 30,
+            "column": 5
+        }
     }
 ]

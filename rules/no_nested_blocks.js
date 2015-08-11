@@ -9,7 +9,7 @@ module.exports = {
             var parent = node.parent;
 
             while (parent) {
-                if (parent.name === 'TMPL_IF') {
+                if (parent.type === 'Condition') {
                     return done(
                         problem(
                             RULE_NAME,
