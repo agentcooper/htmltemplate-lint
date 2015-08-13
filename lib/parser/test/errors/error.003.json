@@ -1,9 +1,0 @@
-{
-    "name": "SyntaxError",
-    "message": "Expected a closing bracket.",
-    "line": 12,
-    "column": 18,
-    "offset": 207,
-    "expected": null,
-    "found": null
-}

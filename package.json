@@ -16,6 +16,7 @@
   "dependencies": {
     "analytics-node": "1.2.2",
     "commander": "2.8.1",
+    "htmltemplate-parser": "0.0.10",
     "levenshtein": "1.0.5",
     "node-uuid": "1.4.3",
     "walk": "2.3.9"

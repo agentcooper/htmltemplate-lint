@@ -68,9 +68,7 @@ function bundle() {
         '*.git*',
         'docs/*',
         'test/*',
-        'tools/*',
-        'lib/parser/test/*',
-        'lib/parser/node_modules/*'
+        'tools/*'
     ].concat(
         // Omitting dev dependencies from the resulting bundle.
         Object.keys(pkg.devDependencies).map(function(dep) {

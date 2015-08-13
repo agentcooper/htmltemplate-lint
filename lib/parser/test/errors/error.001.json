@@ -1,9 +1,0 @@
-{
-    "name": "SyntaxError",
-    "message": "Unexpected $ in attribute name.",
-    "line": 1,
-    "column": 10,
-    "offset": 9,
-    "expected": null,
-    "found": null
-}
