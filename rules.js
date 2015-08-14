@@ -14,7 +14,8 @@ var rules = [
     'no_nested_setvar',
     'no_tmpl_loop',
     'no_verbose_assignment',
-    'wrap_in_markers'
+    'wrap_in_markers',
+    'bad_perl_identifier'
 ];
 
 module.exports = rules.map(function(rule) {

@@ -8,6 +8,7 @@
     "test": "mocha test/test.js",
     "generate-ancients": "node tools/generate_ancient_experiments.js",
     "deploy": "node tools/deploy.js",
+    "build-parser": "pegjs lib/perl-expression-parser/perl-expression.pegjs lib/perl-expression-parser/index.js",
     "precommit": "npm test",
     "prepush": "npm test"
   },

@@ -1,0 +1,20 @@
+[
+    {
+        "name": "bad_perl_identifier",
+        "type": "Warning",
+        "message": "Bad perl identifier",
+        "position": {
+            "line": 11,
+            "column": 11
+        }
+    },
+    {
+        "name": "bad_perl_identifier",
+        "type": "Warning",
+        "message": "Bad perl identifier",
+        "position": {
+            "line": 19,
+            "column": 11
+        }
+    }
+]

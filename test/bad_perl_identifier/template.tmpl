@@ -1,0 +1,29 @@
+<TMPL_MARKER START>
+
+<TMPL_VAR [% $abc && 'sss' && $def %]>
+
+<TMPL_VAR [% ( $b_note == $note_field_title ) %]>
+
+<TMPL_ASSIGN b_is_in_wishlist [% $b_user_hotel_wishlists and $b_user_hotel_wishlists == 1 and $b_user_hotel_wishlists->[0]->{b_wishlist_selected} == 1 %]>
+
+<TMPL_IF [% $add_link_to_list == 1 %]> tfl-link-inline<TMPL_ELSIF [% $m_tfl_add_link_to_list == 2 %]> tfl-link-block</TMPL_IF>
+
+<TMPL_VAR [% b_wishlist_name eq 'wishlist_default_02' %]>
+
+<TMPL_VAR [% seq(1, 30) %]>
+
+<TMPL_VAR [% $b_user_hotel_wishlists and @$b_user_hotel_wishlists == 1 and $b_user_hotel_wishlists->[0]->{b_wishlist_selected} == 1 %]>
+
+<TMPL_VAR [% $b_track_experiment_tfl_header_lists_copy == 1 && $b_lang=~/(it|zh-cn|nl|ja|sv|ko|es-ar|da|hr)/ %]>
+
+<TMPL_VAR [% $b_user_hotel_wishlists && b_user_hotel_wishlists == 1 %]>
+
+<TMPL_VAR [% $run_m_tfl_add_one_click and not $is_wl_for_hp %]>
+
+<TMPL_VAR [% $b_l_tag_list_item_is_fixed ? 'df_fixed' : 'df_selected' %]>
+
+<TMPL_VAR [% $b_remaining >= 0 %]>
+
+<TMPL_VAR [% $b_reg_user_avatar and ref $b_reg_user_avatar eq 'ARRAY' %]>
+
+<TMPL_MARKER END>
