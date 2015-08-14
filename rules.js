@@ -1,7 +1,7 @@
 var bookingConfig = require('./booking-config');
 
 var rules = [
-    'variable_name_style',
+    'bad_perl_identifier',
     'did_you_mean',
     'missing_required_attr',
     'no_ancient_experiments',
@@ -14,8 +14,8 @@ var rules = [
     'no_nested_setvar',
     'no_tmpl_loop',
     'no_verbose_assignment',
-    'wrap_in_markers',
-    'bad_perl_identifier'
+    'variable_name_style',
+    'wrap_in_markers'
 ];
 
 module.exports = rules.map(function(rule) {
