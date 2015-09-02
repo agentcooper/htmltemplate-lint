@@ -13,7 +13,8 @@ module.exports = function(tmpl, callback) {
             parser.parse(
                 tmpl,
                 {
-                    reducePositionLookups: tmpl.length > BIG_FILE_THRESHOLD
+                    reducePositionLookups: tmpl.length > BIG_FILE_THRESHOLD,
+                    ignoreHTMLTags: true
                 }
             ),
             rules,
@@ -28,8 +29,8 @@ module.exports = function(tmpl, callback) {
                 e.message,
                 {
                     position: {
-                        line: e.line,
-                        column: e.column
+                        line: e.location.start.line,
+                        column: e.location.start.column
                     }
                 }
             )
