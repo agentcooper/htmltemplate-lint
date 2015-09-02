@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "commander": "2.8.1",
-    "htmltemplate-parser": "0.0.10",
+    "htmltemplate-parser": "0.1.0",
     "levenshtein": "1.0.5",
     "walk": "2.3.9"
   },
