@@ -1,7 +1,6 @@
 var bookingConfig = require('./booking-config');
 
 var rules = [
-    'bad_perl_identifier',
     'did_you_mean',
     'missing_required_attr',
     'no_ancient_experiments',

@@ -22,16 +22,27 @@ module.exports = function(tmpl, callback) {
         );
     } catch(e) {
         // Returning array for consistency with rules runner.
+        var location;
+
+        if (e.location) {
+            location = {
+                line: e.location.start.line,
+                column: e.location.start.column
+            };
+        } else {
+            location = {
+                line: e.line,
+                column: e.column
+            };
+        }
+
         callback([
             problem(
                 'parse_error',
                 C.RESULT_TYPES.ERROR,
                 e.message,
                 {
-                    position: {
-                        line: e.location.start.line,
-                        column: e.location.start.column
-                    }
+                    position: location
                 }
             )
         ]);
