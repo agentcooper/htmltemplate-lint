@@ -5,7 +5,7 @@
   "bin": "bin/lint",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/test.js",
+    "test": "mocha test/test.js --bail",
     "generate-ancients": "node tools/generate_ancient_experiments.js",
     "deploy": "node tools/deploy.js",
     "precommit": "npm test",
@@ -15,8 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "commander": "2.8.1",
-    "htmltemplate-parser": "0.3.1",
+    "htmltemplate-parser": "0.3.2",
     "levenshtein": "1.0.5",
+    "traverse": "0.6.6",
     "walk": "2.3.9"
   },
   "devDependencies": {

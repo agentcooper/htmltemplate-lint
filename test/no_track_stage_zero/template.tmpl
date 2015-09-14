@@ -1,0 +1,11 @@
+<TMPL_MARKER START>
+
+<TMPL_IF [% $condition && track_experiment_stage('exp_id', 1) %]>
+    <TMPL_VAR b_text>
+</TMPL_IF>
+
+<TMPL_IF [% $condition && track_experiment_stage('exp_id', 0) %]>
+    <TMPL_VAR b_text>
+</TMPL_IF>
+
+<TMPL_MARKER END>

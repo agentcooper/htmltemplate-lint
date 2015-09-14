@@ -1,0 +1,11 @@
+[
+    {
+        "type": "Error",
+        "name": "no_track_stage_zero",
+        "message": "Don't call track_experiment_stage for stage 0, use b_track_experiment instead.",
+        "position": {
+            "line": 7,
+            "column": 27
+        }
+    }
+]
