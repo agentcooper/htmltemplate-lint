@@ -15,6 +15,7 @@ var rules = [
     'no_tmpl_loop',
     'no_track_stage_zero',
     'no_verbose_assignment',
+    'use_correct_operator',
     'variable_name_style',
     'wrap_in_markers'
 ];

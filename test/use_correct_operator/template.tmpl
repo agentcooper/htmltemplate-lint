@@ -1,0 +1,15 @@
+<TMPL_MARKER START>
+
+<TMPL_IF [% $b_track_experiment_id == 1 %]></TMPL_IF>
+<TMPL_IF [% 2 != $b_track_experiment_id %]></TMPL_IF>
+<TMPL_IF [% $value == $b_value || $value eq $b_value  %]></TMPL_IF>
+<TMPL_IF [% $b_track_experiment_id eq 3 %]></TMPL_IF>
+<TMPL_IF [% 3 ne $b_track_experiment_id %]></TMPL_IF>
+
+<TMPL_IF [% $b_class_name eq 'ok' %]></TMPL_IF>
+<TMPL_IF [% 'ok' ne $b_class_name %]></TMPL_IF>
+<TMPL_IF [% $value ne $b_value || $value != $b_value  %]></TMPL_IF>
+<TMPL_IF [% $b_class_name == 'ok' %]></TMPL_IF>
+<TMPL_IF [% 'ok' != $b_class_name %]></TMPL_IF>
+
+<TMPL_MARKER END>
