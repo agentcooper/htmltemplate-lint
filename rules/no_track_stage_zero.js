@@ -4,6 +4,8 @@ var problem = require('../lib/problem');
 var RULE_NAME = 'no_track_stage_zero';
 
 module.exports = {
+    matchExpression: true,
+
     run: function(node, done) {
         var isWrongTrackStageCall = (
             node.type === 'CallExpression' &&

@@ -15,7 +15,9 @@ function setup(config) {
             var content = getContent(node);
 
             if (content.length === 0) {
-                return;
+                return done(
+                    problem(RULE_NAME, C.RESULT_TYPES.NO_PROBLEMS)
+                );
             }
 
             for (var j = 0; j < content.length; j++) {
@@ -46,7 +48,7 @@ function setup(config) {
                 problem(RULE_NAME, C.RESULT_TYPES.NO_PROBLEMS)
             );
         }
-    }
+    };
 };
 
 module.exports = setup;

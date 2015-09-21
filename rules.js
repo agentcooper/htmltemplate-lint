@@ -9,6 +9,7 @@ var rules = [
     'no_generate_variant',
     'no_html_commented_tags',
     'no_invalid_tags',
+    'no_mixed_operator_types',
     'no_nested_blocks',
     'no_nested_setvar',
     'no_tmpl_loop',

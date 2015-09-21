@@ -1,0 +1,15 @@
+<TMPL_MARKER START>
+
+<TMPL_IF [% $a or $b && $c %]>
+    <TMPL_VAR b_value>
+</TMPL_IF>
+
+<TMPL_IF [% $a or ($b or $c) eq 'abc' %]>
+    <TMPL_VAR b_value>
+</TMPL_IF>
+
+<TMPL_IF [% (not $a) || $b && $c %]>
+    <TMPL_VAR b_value>
+</TMPL_IF>
+
+<TMPL_MARKER END>
