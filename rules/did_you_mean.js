@@ -57,8 +57,8 @@ function getContent(node) {
     if (node.type === 'SingleAttribute') {
         return [node.name];
     }
-    if (node.type === 'PairAttribute' && (typeof node.value === 'string')) {
-        return [node.value];
+    if (node.type === 'PairAttribute' && node.value && (typeof node.value.name === 'string')) {
+        return [node.value.name];
     }
     if (node.type === 'Expression') {
         var match = node.value.match(PERL_IDENTIFIER);

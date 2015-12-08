@@ -14,7 +14,8 @@ module.exports = function(tmpl, callback) {
                 tmpl,
                 {
                     reducePositionLookups: tmpl.length > BIG_FILE_THRESHOLD,
-                    ignoreHTMLTags: true
+                    ignoreHTMLTags: true,
+                    withEntities: true
                 }
             ),
             rules,

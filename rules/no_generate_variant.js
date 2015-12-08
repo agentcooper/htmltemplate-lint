@@ -12,8 +12,9 @@ module.exports = {
                 mentionsGenerateVariant(node.name)
             ) || (
                 node.type === 'PairAttribute' &&
-                typeof node.value === 'string' &&
-                mentionsGenerateVariant(node.value)
+                node.value &&
+                typeof node.value.name === 'string' &&
+                mentionsGenerateVariant(node.value.name)
             ) || (
                 node.type === 'Expression' &&
                 mentionsGenerateVariant(node.value)
