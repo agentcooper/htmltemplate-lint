@@ -19,6 +19,7 @@ var KNOWN_TAGS = [
     'TMPL_CONFIGURE',
     'TMPL_CONTINUE',
     'TMPL_ASSIGN',
+    'TMPL_DATE',
     // These tags are not implemented by the parser:
     'TMPL_CASE',
     'TMPL_WHEN',
