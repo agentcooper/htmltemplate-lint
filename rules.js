@@ -12,6 +12,7 @@ var rules = [
     'no_mixed_operator_types',
     'no_nested_blocks',
     'no_nested_setvar',
+    'no_overtracking',
     'no_tmpl_loop',
     'no_track_stage_zero',
     'no_verbose_assignment',
