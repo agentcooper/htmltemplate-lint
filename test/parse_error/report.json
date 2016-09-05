@@ -2,7 +2,7 @@
     {
         "type": "Error",
         "name": "parse_error",
-        "message": "Expected \"#\", \"##\", \"<\", any character or end of line but end of input found.",
+        "message": "Expected \"##\", \"<\", or any character but end of input found.",
         "position": {
             "line": 7,
             "column": 1
