@@ -20,6 +20,8 @@ var KNOWN_TAGS = [
     'TMPL_CONTINUE',
     'TMPL_ASSIGN',
     'TMPL_DATE',
+    'TMPL_HELPER',
+    'TMPL_FRAGMENT',
     // These tags are not implemented by the parser:
     'TMPL_CASE',
     'TMPL_WHEN',
